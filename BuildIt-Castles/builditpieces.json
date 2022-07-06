@@ -1,0 +1,27 @@
+{
+  "piecetables": [
+    {
+      "tablename": "_RKC_CustomTable",
+      "categories": [
+        {
+          "categorytabname": "Structure",
+          "pieces": [
+            {
+              "prefabname": "rkc_wall1",
+              "displaynametoken": "$piece_rkc_wall1",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 4
+                }
+              ],
+              "material": "stone",
+              "isFire": false,
+              "isDoor": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

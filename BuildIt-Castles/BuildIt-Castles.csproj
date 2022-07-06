@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\JotunnLib.2.7.1\build\JotunnLib.props" Condition="Exists('..\packages\JotunnLib.2.7.1\build\JotunnLib.props')" />
   <PropertyGroup>
@@ -49,31 +49,34 @@
       <HintPath>..\packages\HarmonyX.2.10.0\lib\net45\0Harmony.dll</HintPath>
     </Reference>
     <Reference Include="assembly_googleanalytics_publicized">
-      <HintPath>..\..\..\..\Documents\publicized_assemblies\assembly_googleanalytics_publicized.dll</HintPath>
+      <HintPath>$(PublicizedAssembliesPath)\assembly_googleanalytics_publicized.dll</HintPath>
     </Reference>
     <Reference Include="assembly_guiutils_publicized">
-      <HintPath>..\..\..\..\Documents\publicized_assemblies\assembly_guiutils_publicized.dll</HintPath>
+      <HintPath>$(PublicizedAssembliesPath)\assembly_guiutils_publicized.dll</HintPath>
     </Reference>
     <Reference Include="assembly_lux_publicized">
-      <HintPath>..\..\..\..\Documents\publicized_assemblies\assembly_lux_publicized.dll</HintPath>
+      <HintPath>$(PublicizedAssembliesPath)\assembly_lux_publicized.dll</HintPath>
     </Reference>
     <Reference Include="assembly_postprocessing_publicized">
-      <HintPath>..\..\..\..\Documents\publicized_assemblies\assembly_postprocessing_publicized.dll</HintPath>
+      <HintPath>$(PublicizedAssembliesPath)\assembly_postprocessing_publicized.dll</HintPath>
     </Reference>
     <Reference Include="assembly_simplemeshcombine_publicized">
-      <HintPath>..\..\..\..\Documents\publicized_assemblies\assembly_simplemeshcombine_publicized.dll</HintPath>
+      <HintPath>$(PublicizedAssembliesPath)\assembly_simplemeshcombine_publicized.dll</HintPath>
     </Reference>
     <Reference Include="assembly_steamworks_publicized">
-      <HintPath>..\..\..\..\Documents\publicized_assemblies\assembly_steamworks_publicized.dll</HintPath>
+      <HintPath>$(PublicizedAssembliesPath)\assembly_steamworks_publicized.dll</HintPath>
     </Reference>
     <Reference Include="assembly_sunshafts_publicized">
-      <HintPath>..\..\..\..\Documents\publicized_assemblies\assembly_sunshafts_publicized.dll</HintPath>
+      <HintPath>$(PublicizedAssembliesPath)\assembly_sunshafts_publicized.dll</HintPath>
     </Reference>
     <Reference Include="assembly_utils_publicized">
-      <HintPath>..\..\..\..\Documents\publicized_assemblies\assembly_utils_publicized.dll</HintPath>
+      <HintPath>$(PublicizedAssembliesPath)\assembly_utils_publicized.dll</HintPath>
     </Reference>
     <Reference Include="assembly_valheim_publicized">
-      <HintPath>..\..\..\..\Documents\publicized_assemblies\assembly_valheim_publicized.dll</HintPath>
+      <HintPath>$(PublicizedAssembliesPath)\assembly_valheim_publicized.dll</HintPath>
+    </Reference>
+    <Reference Include="fastJSON, Version=2.4.0.0, Culture=neutral, PublicKeyToken=6b75a806b86095cd, processorArchitecture=MSIL">
+      <HintPath>..\packages\fastJSON.2.4.0.4\lib\net40\fastJSON.dll</HintPath>
     </Reference>
     <Reference Include="Jotunn, Version=2.7.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\JotunnLib.2.7.1\lib\net462\Jotunn.dll</HintPath>
@@ -108,12 +111,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BuildItEffectLists.cs" />
+    <Compile Include="BuildItMaterial.cs" />
+    <Compile Include="BuildItPiece.cs" />
+    <Compile Include="BuildItPieceCategories.cs" />
+    <Compile Include="BuildItPieceRequirement.cs" />
+    <Compile Include="BuildItPieces.cs" />
+    <Compile Include="BuildItPieceTable.cs" />
     <Compile Include="Properties\IgnoreAccessModifiers.cs" />
     <Compile Include="BuildIt-Castles.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\environment.props">
+      <Link>environment.props</Link>
+    </None>
     <None Include="app.config" />
+    <None Include="builditpieces.json" />
     <None Include="packages.config" />
     <None Include="README.md" />
   </ItemGroup>
@@ -124,6 +138,9 @@
     <None Include="Package\manifest.json" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="..\packages\fastJSON.2.4.0.4\lib\net40\fastJSON.dll">
+      <Link>Lib\FastJson\fastJSON.dll</Link>
+    </EmbeddedResource>
     <Content Include="Package\icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
