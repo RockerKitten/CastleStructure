@@ -8,7 +8,117 @@
           "pieces": [
             {
               "prefabname": "rkc_wall1",
-              "displaynametoken": "$piece_rkc_wall1",
+              "displaynametoken": "$piece_rkc_wall",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 4
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_wall2",
+              "displaynametoken": "$piece_rkc_wall",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 4
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_wall3",
+              "displaynametoken": "$piece_rkc_wall",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 4
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_wall4",
+              "displaynametoken": "$piece_rkc_wall",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 4
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_floor1",
+              "displaynametoken": "$piece_rkc_floor",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 4
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_floor2",
+              "displaynametoken": "$piece_rkc_floor",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 4
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_floor3",
+              "displaynametoken": "$piece_rkc_floor",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 4
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_floor4",
+              "displaynametoken": "$piece_rkc_floor",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 4
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_floor5",
+              "displaynametoken": "$piece_rkc_floor",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 4
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_floor6",
+              "displaynametoken": "$piece_rkc_floor",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 4
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_floor7",
+              "displaynametoken": "$piece_rkc_floor",
               "requirements": [
                 {
                   "item": "Stone",
