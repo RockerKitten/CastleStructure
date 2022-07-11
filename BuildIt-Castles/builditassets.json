@@ -15,9 +15,7 @@
                   "amount": 4
                 }
               ],
-              "material": "stone",
-              "isFire": false,
-              "isDoor": false
+              "material": "stone"
             }
           ]
         }

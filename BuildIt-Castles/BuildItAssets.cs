@@ -8,7 +8,7 @@ using System.Collections.Generic;
 
 namespace BuildItCastles
 {
-    public class BuildItPieces
+    public class BuildItAssets
     {
         public List<BuildItPieceTable> PieceTables { get; set; }
     }

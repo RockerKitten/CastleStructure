@@ -111,23 +111,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BuildItAssets.cs" />
     <Compile Include="BuildItEffectLists.cs" />
     <Compile Include="BuildItMaterial.cs" />
     <Compile Include="BuildItPiece.cs" />
     <Compile Include="BuildItPieceCategories.cs" />
     <Compile Include="BuildItPieceRequirement.cs" />
-    <Compile Include="BuildItPieces.cs" />
     <Compile Include="BuildItPieceTable.cs" />
     <Compile Include="Properties\IgnoreAccessModifiers.cs" />
     <Compile Include="BuildIt-Castles.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="..\..\..\..\Downloads\AssetBundles\fresh\castles">
+      <Link>castles</Link>
+    </EmbeddedResource>
     <None Include="..\environment.props">
       <Link>environment.props</Link>
     </None>
     <None Include="app.config" />
-    <None Include="builditpieces.json" />
+    <EmbeddedResource Include="builditassets.json" />
     <None Include="packages.config" />
     <None Include="README.md" />
   </ItemGroup>

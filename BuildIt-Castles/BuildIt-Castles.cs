@@ -36,17 +36,60 @@ namespace BuildItCastles
         private void Awake()
         {
             LoadEmbeddedAssembly("fastJSON.dll");
-            this.BuildItAssetBundle = AssetUtils.LoadAssetBundleFromResources("buildit", Assembly.GetExecutingAssembly());
+            this.BuildItAssetBundle = AssetUtils.LoadAssetBundleFromResources("castles", Assembly.GetExecutingAssembly());
 
-            PrefabManager.OnVanillaPrefabsAvailable += InitializeBuildItAssets;
+            PrefabManager.OnVanillaPrefabsAvailable += SetupAssets;
             Jotunn.Logger.LogInfo("BuildIt-Castles has landed");
         }
-        
+
+        private void SetupAssets()
+        {
+            this.effects = InitializeEffects();
+            InitializeBuildItConstructionTools();
+            InitializeBuildItAssets();
+
+            PrefabManager.OnVanillaPrefabsAvailable -= SetupAssets;
+        }
+
+        private void InitializeBuildItConstructionTools()
+        {
+            var hammerTableFab = this.BuildItAssetBundle.LoadAsset<GameObject>("_RKC_CustomTable");
+            var masonryTable = new CustomPieceTable(hammerTableFab,
+                new PieceTableConfig
+                {
+                    CanRemovePieces = true,
+                    UseCategories = false,
+                    UseCustomCategories = true,
+                    CustomCategories = new string[]
+                    {
+                        "Structure", "Furniture", "Outdoors"
+                    }
+                });
+            PieceManager.Instance.AddPieceTable(masonryTable);
+            var toolFab = this.BuildItAssetBundle.LoadAsset<GameObject>("rkc_trowel");
+            var tool = new CustomItem(toolFab, false,
+                new ItemConfig
+                {
+                    Name = "$item_rkctrowel",
+                    Amount = 1,
+                    Enabled = true,
+                    CraftingStation = "forge",
+                    PieceTable = masonryTable.PieceTablePrefab.name,
+                    RepairStation = "forge",
+                    Requirements = new[]
+                    {
+                        new RequirementConfig {Item = "Wood", Amount = 1},
+                        new RequirementConfig {Item = "Iron", Amount = 1 }
+                    }
+                });
+            ItemManager.Instance.AddItem(tool);
+        }
+
         private void InitializeBuildItAssets()
         {
-            var buildItPieces = LoadJsonFile<BuildItPieces>("builditpieces.json");
+            var buildItAssets = LoadEmbeddedJsonFile<BuildItAssets>("builditassets.json");
 
-            foreach (var buildItPieceTable in buildItPieces.PieceTables)
+            foreach (var buildItPieceTable in buildItAssets.PieceTables)
             {
                 foreach (var buildItPieceCategory in buildItPieceTable.Categories)
                 {
@@ -118,10 +161,6 @@ namespace BuildItCastles
 
             return effects;
 
-            // NOTE: not sure what to do with these yet.
-            //fireVol.outputAudioMixerGroup = AudioMan.instance.m_ambientMixer;
-            //PrefabManager.OnVanillaPrefabsAvailable -= LoadSounds;
-
             // ORIGINAL REFERENCE DATA FROM BUILDIT
 
             //var sfxStoneBuild = loadfx("sfx_build_hammer_stone");
@@ -185,6 +224,10 @@ namespace BuildItCastles
             pieceConfig.PieceTable = buildItPieceTable.TableName;
             pieceConfig.Category = buildItPieceCategory.CategoryTabName;
             pieceConfig.Enabled = buildItPiece.Enabled;
+            if (!string.IsNullOrWhiteSpace(buildItPiece.RequiredStation))
+            {
+                pieceConfig.CraftingStation = buildItPiece.RequiredStation;
+            }
 
             var requirements = buildItPiece.Requirements
                 .Select(r => new RequirementConfig(r.Item, r.Amount, recover: r.Recover));
@@ -203,17 +246,18 @@ namespace BuildItCastles
             wearComponent.m_destroyedEffect = this.effects[buildItPiece.Material].Break;
             wearComponent.m_hitEffect = this.effects[buildItPiece.Material].Hit;
 
-            if (buildItPiece.IsDoor)
+            if (piecePrefab.TryGetComponent<Door>(out Door doorComponent))
             {
-                var doorComponent = piecePrefab.GetComponent<Door>();
                 doorComponent.m_openEffects = this.effects[buildItPiece.Material].Open;
                 doorComponent.m_closeEffects = this.effects[buildItPiece.Material].Close;
             }
 
-            if (buildItPiece.IsFire)
+            if (piecePrefab.TryGetComponent<Fireplace>(out Fireplace fireplaceComponent))
             {
-                var fireComponent = piecePrefab.GetComponent<Fireplace>();
-                fireComponent.m_fuelAddedEffects = this.effects[buildItPiece.Material].Fuel;                
+                fireplaceComponent.m_fuelAddedEffects = this.effects[buildItPiece.Material].Fuel;
+
+                var fireAudioSource = piecePrefab.GetComponentInChildren<AudioSource>();
+                fireAudioSource.outputAudioMixerGroup = AudioMan.instance.m_ambientMixer;
             }
         }
 
@@ -247,13 +291,24 @@ namespace BuildItCastles
             return null;
         }
 
-        private T LoadJsonFile<T>(string filename) where T : class
+        private T LoadEmbeddedJsonFile<T>(string filename) where T : class
         {
-            var jsonFile = LoadJsonText(filename);
+            string jsonFileText = String.Empty;
+
+            using (StreamReader reader = new StreamReader(LoadEmbeddedJsonStream(filename)))
+            {
+                jsonFileText = reader.ReadToEnd();
+            }
+
             T result;
+
             try
             {
-                result = string.IsNullOrEmpty(jsonFile) ? null : JSON.ToObject<T>(jsonFile);
+                var jsonParameters = new JSONParameters
+                {
+                    AutoConvertStringToNumbers = true,               
+                };
+                result = string.IsNullOrEmpty(jsonFileText) ? null : JSON.ToObject<T>(jsonFileText, jsonParameters);
             }
             catch (Exception)
             {
@@ -264,23 +319,9 @@ namespace BuildItCastles
             return result;
         }
 
-        private string LoadJsonText(string filename)
+        private Stream LoadEmbeddedJsonStream(string filename)
         {
-            var jsonFileName = GetAssetPath(filename);
-            return !string.IsNullOrEmpty(jsonFileName) ? File.ReadAllText(jsonFileName) : null;
-        }
-
-        private string GetAssetPath(string assetName)
-        {
-            var assembly = Assembly.GetCallingAssembly();
-            var assetFileName = Path.Combine(Path.GetDirectoryName(assembly.Location) ?? string.Empty, assetName);
-            if (!File.Exists(assetFileName))
-            {
-                Logger.LogError($"Could not find asset ({assetName})");
-                return null;
-            }
-
-            return assetFileName;
+            return this.GetManifestResourceStream(filename);
         }
     }
 }

@@ -9,7 +9,7 @@ namespace BuildItCastles
 {
     public class BuildItPieceTable
     {
-        public IEnumerable<BuildItPieceCategories> Categories { get; set; }
+        public List<BuildItPieceCategories> Categories { get; set; }
         public string TableName { get; set; }
     }
 }
