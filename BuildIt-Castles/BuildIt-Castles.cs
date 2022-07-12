@@ -15,7 +15,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using fastJSON;
-
 namespace BuildItCastles
 {
     [BepInPlugin(PluginGUID, PluginName, PluginVersion)]
@@ -30,6 +29,7 @@ namespace BuildItCastles
         public static CustomLocalization Localization = LocalizationManager.Instance.GetLocalization();
 
         private AssetBundle BuildItAssetBundle { get; set; }
+        private AudioSource fireAudioSource;
 
         private Dictionary<BuildItMaterial, BuildItEffectLists> effects;
 
@@ -47,7 +47,6 @@ namespace BuildItCastles
             this.effects = InitializeEffects();
             InitializeBuildItConstructionTools();
             InitializeBuildItAssets();
-
             PrefabManager.OnVanillaPrefabsAvailable -= SetupAssets;
         }
 
@@ -62,7 +61,7 @@ namespace BuildItCastles
                     UseCustomCategories = true,
                     CustomCategories = new string[]
                     {
-                        "Structure", "Furniture", "Outdoors"
+                        "Structure", "Furniture", "Outdoors","Lights"
                     }
                 });
             PieceManager.Instance.AddPieceTable(masonryTable);
@@ -255,10 +254,11 @@ namespace BuildItCastles
             if (piecePrefab.TryGetComponent<Fireplace>(out Fireplace fireplaceComponent))
             {
                 fireplaceComponent.m_fuelAddedEffects = this.effects[buildItPiece.Material].Fuel;
-
-                var fireAudioSource = piecePrefab.GetComponentInChildren<AudioSource>();
-                fireAudioSource.outputAudioMixerGroup = AudioMan.instance.m_ambientMixer;
+                
+                //fireAudioSource = piecePrefab.GetComponentInChildren<AudioSource>();
+                //fireAudioSource.outputAudioMixerGroup = AudioMan.instance.m_ambientMixer;
             }
+
         }
 
         // LOADING EMBEDDED RESOURCES

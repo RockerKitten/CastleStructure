@@ -117,12 +117,316 @@
               "material": "stone"
             },
             {
-              "prefabname": "rkc_floor7",
-              "displaynametoken": "$piece_rkc_floor",
+              "prefabname": "rkc_door",
+              "displaynametoken": "$piece_rkc_door",
+              "requirements": [
+                {
+                  "item": "Wood",
+                  "amount": 6
+                }
+              ],
+              "material": "wood"
+            },
+            {
+              "prefabname": "rkc_door2",
+              "displaynametoken": "$piece_rkc_door",
+              "requirements": [
+                {
+                  "item": "Wood",
+                  "amount": 6
+                }
+              ],
+              "material": "wood"
+            },
+            {
+              "prefabname": "rkc_door3",
+              "displaynametoken": "$piece_rkc_door",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 6
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_door4",
+              "displaynametoken": "$piece_rkc_door",
+              "requirements": [
+                {
+                  "item": "Wood",
+                  "amount": 4
+                },
+                {
+                  "item": "Stone",
+                  "amount": 2
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_windowplain",
+              "displaynametoken": "$piece_rkc_window",
+              "requirements": [
+                {
+                  "item": "Wood",
+                  "amount": 4
+                },
+                {
+                  "item": "Stone",
+                  "amount": 2
+                }
+              ],
+              "material": "wood"
+            },
+            {
+              "prefabname": "rkc_windowshort",
+              "displaynametoken": "$piece_rkc_window",
+              "requirements": [
+                {
+                  "item": "Wood",
+                  "amount": 4
+                },
+                {
+                  "item": "Stone",
+                  "amount": 2
+                }
+              ],
+              "material": "wood"
+            },
+            {
+              "prefabname": "rkc_windowsmed",
+              "displaynametoken": "$piece_rkc_window",
+              "requirements": [
+                {
+                  "item": "Wood",
+                  "amount": 6
+                },
+                {
+                  "item": "Stone",
+                  "amount": 3
+                }
+              ],
+              "material": "wood"
+            },
+            {
+              "prefabname": "rkc_windowtall",
+              "displaynametoken": "$piece_rkc_window",
+              "requirements": [
+                {
+                  "item": "Wood",
+                  "amount": 8
+                },
+                {
+                  "item": "Stone",
+                  "amount": 4
+                }
+              ],
+              "material": "wood"
+            }
+          ]
+        },
+        {
+          "categorytabname": "Furniture",
+          "pieces": [
+            {
+              "prefabname": "rkc_bed",
+              "displaynametoken": "$piece_rkc_bed",
+              "requirements": [
+                {
+                  "item": "Wood",
+                  "amount": 6
+                },
+                {
+                  "item": "IronNails",
+                  "amount": 8
+                },
+                {
+                  "item": "LinenThread",
+                  "amount": 10
+                }
+              ],
+              "material": "wood"
+            },
+            {
+              "prefabname": "rkc_shelfshort",
+              "displaynametoke": "$piece_rkc_shelf",
+              "requirements": [
+                {
+                  "item": "Wood",
+                  "amount": 4
+                }
+              ],
+              "material": "wood"
+            },
+            {
+              "prefabname": "rkc_shelflong",
+              "displaynametoke": "$piece_rkc_shelf",
+              "requirements": [
+                {
+                  "item": "Wood",
+                  "amount": 6
+                }
+              ],
+              "material": "wood"
+            },
+            {
+              "prefabname": "rkc_table",
+              "displaynametoke": "$piece_rkc_table",
+              "requirements": [
+                {
+                  "item": "Wood",
+                  "amount": 6
+                }
+              ],
+              "material": "wood"
+            },
+            {
+              "prefabname": "rkc_tableside",
+              "displaynametoke": "$piece_rkc_sidetable",
+              "requirements": [
+                {
+                  "item": "Wood",
+                  "amount": 4
+                }
+              ],
+              "material": "wood"
+            },
+            {
+              "prefabname": "rkc_urn1",
+              "displaynametoken": "$piece_rkc_urn",
               "requirements": [
                 {
                   "item": "Stone",
                   "amount": 4
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_urn2",
+              "displaynametoken": "$piece_rkc_urn",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 4
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_bottle",
+              "displaynametoken": "$piece_rkc_bottle",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 2
+                }
+              ],
+              "material": "stone"
+            }
+          ]
+        },
+        {
+          "categorytabname": "Outdoors",
+          "pieces": [
+            {
+              "prefabname": "rkc_fence1",
+              "displaynametoken": "$piece_rkc_fence",
+              "requirements": [
+                {
+                  "item": "Wood",
+                  "amount": 4
+                }
+              ],
+              "material": "wood"
+            },
+            {
+              "prefabname": "rkc_fence2",
+              "displaynametoken": "$piece_rkc_fence",
+              "requirements": [
+                {
+                  "item": "Wood",
+                  "amount": 4
+                }
+              ],
+              "material": "wood"
+            },
+            {
+              "prefabname": "rkc_tree1",
+              "displaynametoken": "$piece_rkc_tree",
+              "requirements": [
+                {
+                  "item": "Wood",
+                  "amount": 10
+                }
+              ],
+              "material": "wood"
+            },
+            {
+              "prefabname": "rkc_tree2",
+              "displaynametoken": "$piece_rkc_tree",
+              "requirements": [
+                {
+                  "item": "Wood",
+                  "amount": 10
+                }
+              ],
+              "material": "wood"
+            },
+            {
+              "prefabname": "rkc_fountain",
+              "displaynametoken": "$piece_rkc_fountain",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 10
+                }
+              ],
+              "material": "stone"
+            }
+          ]
+        },
+        {
+          "categorytabname": "Lights",
+          "pieces": [
+            {
+              "prefabname": "rkc_torchwall",
+              "displaynametoken": "$piece_rkc_torch",
+              "requirements": [
+                {
+                  "item": "Iron",
+                  "amount": 2
+                },
+                {
+                  "item": "Resin",
+                  "amount": 2
+                }
+              ],
+              "material": "metal"
+            },
+            {
+              "prefabname": "rkc_candle",
+              "displaynametoken": "$piece_rkc_candle",
+              "requirements": [
+                {
+                  "item": "Iron",
+                  "amount": 2
+                }
+              ],
+              "material": "metal"
+            },
+            {
+              "prefabname": "rkc_crystal",
+              "displaynametoke": "$piece_rkc_crystal",
+              "requirements": [
+                {
+                  "item": "Crystal",
+                  "amount": 2
+                },
+                {
+                  "item": "Raspberry",
+                  "amount": 2
                 }
               ],
               "material": "stone"

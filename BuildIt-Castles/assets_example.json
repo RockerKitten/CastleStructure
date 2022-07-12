@@ -1,0 +1,59 @@
+{
+  "piecetables": [
+    {
+      "tablename": "_RKC_CustomTable",
+      "categories": [
+        {
+          "categorytabname": "",
+          "pieces": [
+            {
+              "prefabname": "",
+              "displaynametoken": "$piece_rkc_",
+              "requirements": [
+                {
+                  "item": "",
+                  "amount": 
+                }
+              ],
+              "material": ""
+            },
+			{
+              "prefabname": "",
+              "displaynametoken": "$piece_rkc_",
+              "requirements": [
+                {
+                  "item": "",
+                  "amount": 
+                }
+              ],
+              "material": ""
+            }
+		]},
+		{
+          "categorytabname": "",
+          "pieces": [
+            {
+              "prefabname": "",
+              "displaynametoken": "$piece_rkc_",
+              "requirements": [
+                {
+                  "item": "",
+                  "amount": 
+                }
+              ],
+              "material": ""
+            },
+			{
+              "prefabname": "",
+              "displaynametoken": "$piece_rkc_",
+              "requirements": [
+                {
+                  "item": "",
+                  "amount": 
+                }
+              ],
+              "material": ""
+            }
+		]}
+	]}
+]}
