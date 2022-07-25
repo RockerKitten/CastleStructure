@@ -29,7 +29,7 @@ namespace BuildItCastles
         public static CustomLocalization Localization = LocalizationManager.Instance.GetLocalization();
 
         private AssetBundle BuildItAssetBundle { get; set; }
-        private AudioSource fireAudioSource;
+        //private AudioSource fireAudioSource;
 
         private Dictionary<BuildItMaterial, BuildItEffectLists> effects;
 
@@ -61,7 +61,7 @@ namespace BuildItCastles
                     UseCustomCategories = true,
                     CustomCategories = new string[]
                     {
-                        "Structure", "Furniture", "Outdoors","Lights"
+                        "Structure", "Furniture","Decor", "Misc","Lights"
                     }
                 });
             PieceManager.Instance.AddPieceTable(masonryTable);
@@ -218,6 +218,7 @@ namespace BuildItCastles
             var pieceConfig = new PieceConfig();
             // TODO: verify token string
             pieceConfig.Name = buildItPiece.DisplayNameToken;
+            pieceConfig.Description = buildItPiece.PrefabDescription;
             // NOTE: could move override to json config if needed.
             pieceConfig.AllowedInDungeons = false;
             pieceConfig.PieceTable = buildItPieceTable.TableName;
@@ -233,6 +234,7 @@ namespace BuildItCastles
 
             pieceConfig.Requirements = requirements.ToArray();
             var customPiece = new CustomPiece(buildItPiecePrefab, fixReference: false, pieceConfig);
+            Jotunn.Logger.LogInfo(buildItPiecePrefab.name);
             return customPiece;
         }
 
@@ -254,7 +256,7 @@ namespace BuildItCastles
             if (piecePrefab.TryGetComponent<Fireplace>(out Fireplace fireplaceComponent))
             {
                 fireplaceComponent.m_fuelAddedEffects = this.effects[buildItPiece.Material].Fuel;
-                
+                // how to add fuel type?
                 //fireAudioSource = piecePrefab.GetComponentInChildren<AudioSource>();
                 //fireAudioSource.outputAudioMixerGroup = AudioMan.instance.m_ambientMixer;
             }
