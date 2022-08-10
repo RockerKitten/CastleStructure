@@ -13,5 +13,7 @@ namespace BuildItCastles
         public List<BuildItPieceRequirement> Requirements { get; set; }
 
         public BuildItMaterial Material { get; set; } = BuildItMaterial.Stone;
+
+        public string FuelItem { get; set; }
     }
 }

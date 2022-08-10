@@ -24,7 +24,7 @@ namespace BuildItCastles
     {
         public const string PluginGUID = "com.RockerKitten.BuildItCastles";
         public const string PluginName = "BuildItCastles";
-        public const string PluginVersion = "0.0.1";
+        public const string PluginVersion = "1.0.0";
         
         public static CustomLocalization Localization = LocalizationManager.Instance.GetLocalization();
 
@@ -70,6 +70,7 @@ namespace BuildItCastles
                 new ItemConfig
                 {
                     Name = "$item_rkctrowel",
+                    Description = "Build it castle style with a good old fashioned masonry trowel.",
                     Amount = 1,
                     Enabled = true,
                     CraftingStation = "forge",
@@ -234,6 +235,14 @@ namespace BuildItCastles
 
             pieceConfig.Requirements = requirements.ToArray();
             var customPiece = new CustomPiece(buildItPiecePrefab, fixReference: false, pieceConfig);
+            var material = buildItPiecePrefab.GetComponentsInChildren<Material>();
+            foreach (Material mat in material)
+            {
+                if (mat.name == "replace")
+                {
+                    mat.shader = Shader.Find("Custom/Piece");
+                }
+            }
             Jotunn.Logger.LogInfo(buildItPiecePrefab.name);
             return customPiece;
         }
@@ -257,6 +266,19 @@ namespace BuildItCastles
             {
                 fireplaceComponent.m_fuelAddedEffects = this.effects[buildItPiece.Material].Fuel;
                 // how to add fuel type?
+                //fireplaceComponent.m_fuelItem.name = buildItPiece.FuelItem;
+                //var layer = piecePrefab.GetComponentInChildren<Transform>
+                //if (layer.CompareTag("sfx"))
+                //{
+
+                //}
+                var layer = piecePrefab.transform.Find("_enabled_high/SFX").gameObject;
+                layer.GetComponent<AudioSource>().outputAudioMixerGroup = AudioMan.instance.m_ambientMixer;
+                layer.GetComponent<AudioSource>().clip = 
+
+
+
+                //buildItPiece.FuelItem;
                 //fireAudioSource = piecePrefab.GetComponentInChildren<AudioSource>();
                 //fireAudioSource.outputAudioMixerGroup = AudioMan.instance.m_ambientMixer;
             }

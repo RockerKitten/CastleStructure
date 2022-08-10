@@ -11,22 +11,31 @@ rkc_floor3
 rck_floor4
 rck_floor5
 rck_floor6
-rck_floor7
+/rck_floor7
 rkc_door
 rkc_door2
+rkc_door3
+rkc_door4
 rkc_windowplain
 rkc_windowshort
 rkc_windowsmed
 rkc_windowtall
 
-rkc_trowel
 rkc_bed
 rkc_shelfshort
 rkc_shelflong
 rkc_table
 rkc_tableside
+rkc_urn1
+rkc_urn2
+rkc_bottle
 
 rkc_fence1
 rck_fence2
 rkc_tree1
 rkc_tree2
+rkc_fountain
+
+rkc_torchwall
+rkc_candle
+rkc_crystal
