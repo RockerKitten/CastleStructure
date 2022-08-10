@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace BuildItCastles
+namespace CastleStructure
 {
     public class BuildItPiece
     {

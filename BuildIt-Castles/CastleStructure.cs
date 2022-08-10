@@ -15,15 +15,15 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using fastJSON;
-namespace BuildItCastles
+namespace CastleStructure
 {
     [BepInPlugin(PluginGUID, PluginName, PluginVersion)]
     [BepInDependency(Jotunn.Main.ModGuid)]
     [NetworkCompatibility(CompatibilityLevel.EveryoneMustHaveMod, VersionStrictness.Minor)]
-    internal class BuildItCastles : BaseUnityPlugin
+    internal class CastleStructure : BaseUnityPlugin
     {
-        public const string PluginGUID = "com.RockerKitten.BuildItCastles";
-        public const string PluginName = "BuildItCastles";
+        public const string PluginGUID = "com.RockerKitten.CastleStructure";
+        public const string PluginName = "CastleStructure";
         public const string PluginVersion = "1.0.0";
         
         public static CustomLocalization Localization = LocalizationManager.Instance.GetLocalization();

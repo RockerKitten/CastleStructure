@@ -1,4 +1,4 @@
-﻿namespace BuildItCastles
+﻿namespace CastleStructure
 {
     public class BuildItPieceRequirement
     {

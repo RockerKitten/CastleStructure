@@ -119,7 +119,7 @@
     <Compile Include="BuildItPieceRequirement.cs" />
     <Compile Include="BuildItPieceTable.cs" />
     <Compile Include="Properties\IgnoreAccessModifiers.cs" />
-    <Compile Include="BuildIt-Castles.cs" />
+    <Compile Include="CastleStructure.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -5,7 +5,7 @@
 // Project: BuildIt-Castles
 using System.Collections.Generic;
 
-namespace BuildItCastles
+namespace CastleStructure
 {
     public class BuildItPieceTable
     {
