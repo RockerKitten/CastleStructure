@@ -30,6 +30,7 @@ namespace CastleStructure
 
         private AssetBundle BuildItAssetBundle { get; set; }
         //private AudioSource fireAudioSource;
+        private static GameObject fuelObject;
 
         private Dictionary<BuildItMaterial, BuildItEffectLists> effects;
 
@@ -39,7 +40,7 @@ namespace CastleStructure
             this.BuildItAssetBundle = AssetUtils.LoadAssetBundleFromResources("castles", Assembly.GetExecutingAssembly());
 
             PrefabManager.OnVanillaPrefabsAvailable += SetupAssets;
-            Jotunn.Logger.LogInfo("BuildIt-Castles has landed");
+            Jotunn.Logger.LogInfo("CastleStructure has landed");
         }
 
         private void SetupAssets()
@@ -47,6 +48,7 @@ namespace CastleStructure
             this.effects = InitializeEffects();
             InitializeBuildItConstructionTools();
             InitializeBuildItAssets();
+            fuelObject = PrefabManager.Cache.GetPrefab<GameObject>("Wood");
             PrefabManager.OnVanillaPrefabsAvailable -= SetupAssets;
         }
 
@@ -65,12 +67,12 @@ namespace CastleStructure
                     }
                 });
             PieceManager.Instance.AddPieceTable(masonryTable);
-            var toolFab = this.BuildItAssetBundle.LoadAsset<GameObject>("rkc_trowel");
+            var toolFab = this.BuildItAssetBundle.LoadAsset<GameObject>("rkc_scepter");
             var tool = new CustomItem(toolFab, false,
                 new ItemConfig
                 {
-                    Name = "$item_rkctrowel",
-                    Description = "Build it castle style with a good old fashioned masonry trowel.",
+                    Name = "$item_rkcscepter",
+                    Description = "Build it castle style with the scepter of Power!",
                     Amount = 1,
                     Enabled = true,
                     CraftingStation = "forge",
@@ -266,15 +268,20 @@ namespace CastleStructure
             {
                 fireplaceComponent.m_fuelAddedEffects = this.effects[buildItPiece.Material].Fuel;
                 // how to add fuel type?
-                //fireplaceComponent.m_fuelItem.name = buildItPiece.FuelItem;
+                if (buildItPiece.FuelItem != null && buildItPiece.FuelItem != "")
+                {
+                    var fuelObj = PrefabManager.Cache.GetPrefab<GameObject>(buildItPiece.FuelItem);
+                    var fuelItem = fuelObj.GetComponent<ItemDrop>();
+                    fireplaceComponent.m_fuelItem = fuelItem;
+                }
                 //var layer = piecePrefab.GetComponentInChildren<Transform>
                 //if (layer.CompareTag("sfx"))
                 //{
 
                 //}
-                var layer = piecePrefab.transform.Find("_enabled_high/SFX").gameObject;
-                layer.GetComponent<AudioSource>().outputAudioMixerGroup = AudioMan.instance.m_ambientMixer;
-                layer.GetComponent<AudioSource>().clip = 
+                //var layer = piecePrefab.transform.Find("_enabled_high/SFX").gameObject;
+                //layer.GetComponent<AudioSource>().outputAudioMixerGroup = AudioMan.instance.m_ambientMixer;
+                //layer.GetComponent<AudioSource>().clip = 
 
 
 

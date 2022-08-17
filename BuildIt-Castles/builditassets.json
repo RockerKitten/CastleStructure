@@ -202,6 +202,19 @@
               "material": "stone"
             },
             {
+              "prefabname": "rkc_wall17",
+              "displaynametoken": "$piece_rkc_wall",
+              "prefabdescription": "1/4th arc, 2m radius to 4m radius, 2m tall castle brick wall.",
+              "requiredstation": "piece_stonecutter",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 6
+                }
+              ],
+              "material": "stone"
+            },
+            {
               "prefabname": "rkc_walltrans1",
               "displaynametoken": "$piece_rkc_walltransition",
               "prefabdescription": "Curved 1/8th arc, 2m radius to 4m radius, 2m tall castle brick wall.",
@@ -321,12 +334,38 @@
             {
               "prefabname": "rkc_walltop",
               "displaynametoken": "$piece_rkc_walltop",
-              "prefabdescription": "Castle wall topper.",
+              "prefabdescription": "4m castle wall topper. Lowest part of the slope should face inward.",
+              "requiredstation": "piece_stonecutter",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 8
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_walltop2",
+              "displaynametoken": "$piece_rkc_walltop",
+              "prefabdescription": "2m castle wall topper.",
               "requiredstation": "piece_stonecutter",
               "requirements": [
                 {
                   "item": "Stone",
                   "amount": 4
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_walltopcorner",
+              "displaynametoken": "$piece_rkc_walltopcorner",
+              "prefabdescription": "Castle wall top corner. Looks correct when placed, even though it's odd on it's own.",
+              "requiredstation": "piece_stonecutter",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 2
                 }
               ],
               "material": "stone"
@@ -489,6 +528,66 @@
             },
             {
               "prefabname": "rkc_roof14",
+              "displaynametoken": "$piece_rkc_roof",
+              "prefabdescription": "Metal flat roof",
+              "requirements": [
+                {
+                  "item": "Iron",
+                  "amount": 4
+                }
+              ],
+              "material": "metal"
+            },
+            {
+              "prefabname": "rkc_roof15",
+              "displaynametoken": "$piece_rkc_roof",
+              "prefabdescription": "Metal flat roof",
+              "requirements": [
+                {
+                  "item": "Iron",
+                  "amount": 4
+                }
+              ],
+              "material": "metal"
+            },
+            {
+              "prefabname": "rkc_roof16",
+              "displaynametoken": "$piece_rkc_roof",
+              "prefabdescription": "Metal flat roof",
+              "requirements": [
+                {
+                  "item": "Iron",
+                  "amount": 4
+                }
+              ],
+              "material": "metal"
+            },
+            {
+              "prefabname": "rkc_roof17",
+              "displaynametoken": "$piece_rkc_roof",
+              "prefabdescription": "Metal flat roof",
+              "requirements": [
+                {
+                  "item": "Iron",
+                  "amount": 4
+                }
+              ],
+              "material": "metal"
+            },
+            {
+              "prefabname": "rkc_roof18",
+              "displaynametoken": "$piece_rkc_roof",
+              "prefabdescription": "Metal flat roof",
+              "requirements": [
+                {
+                  "item": "Iron",
+                  "amount": 4
+                }
+              ],
+              "material": "metal"
+            },
+            {
+              "prefabname": "rkc_roof19",
               "displaynametoken": "$piece_rkc_roof",
               "prefabdescription": "Metal flat roof",
               "requirements": [
@@ -764,6 +863,170 @@
               "material": "wood"
             },
             {
+              "prefabname": "rkc_bridge4",
+              "displaynametoken": "$piece_rkc_bridge",
+              "prefabdescription": "Middle section of a snappable bridge.",
+              "requirements": [
+                {
+                  "item": "Wood",
+                  "amount": 10
+                },
+                {
+                  "item": "IronNails",
+                  "amount": 10
+                }
+              ],
+              "material": "wood"
+            },
+            {
+              "prefabname": "rkc_bridge5",
+              "displaynametoken": "$piece_rkc_bridge",
+              "prefabdescription": "Middle section of a snappable bridge.",
+              "requirements": [
+                {
+                  "item": "Wood",
+                  "amount": 10
+                },
+                {
+                  "item": "IronNails",
+                  "amount": 10
+                }
+              ],
+              "material": "wood"
+            },
+            {
+              "prefabname": "rkc_bridge6",
+              "displaynametoken": "$piece_rkc_bridge",
+              "prefabdescription": "",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 5
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_bridge7",
+              "displaynametoken": "$piece_rkc_bridge",
+              "prefabdescription": "",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 5
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_bridge8",
+              "displaynametoken": "$piece_rkc_bridge",
+              "prefabdescription": "",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 5
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_bridge9",
+              "displaynametoken": "$piece_rkc_bridge",
+              "prefabdescription": "",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 5
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_bridge10",
+              "displaynametoken": "$piece_rkc_bridge",
+              "prefabdescription": "",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 5
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_bridge11",
+              "displaynametoken": "$piece_rkc_bridge",
+              "prefabdescription": "",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 5
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_bridge12",
+              "displaynametoken": "$piece_rkc_bridge",
+              "prefabdescription": "",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 5
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_bridge13",
+              "displaynametoken": "$piece_rkc_bridge",
+              "prefabdescription": "",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 5
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_bridgerail1",
+              "displaynametoken": "$piece_rkc_bridgerail",
+              "prefabdescription": "",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 5
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_bridgerail2",
+              "displaynametoken": "$piece_rkc_bridgerail",
+              "prefabdescription": "",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 5
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_bridgerail3",
+              "displaynametoken": "$piece_rkc_bridgerail",
+              "prefabdescription": "",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 5
+                }
+              ],
+              "material": "stone"
+            },
+            {
               "prefabname": "rkc_spiralstair",
               "displaynametoken": "$piece_rkc_spiralstair",
               "prefabdescription": "4m radius clockwise climbing spiral stairs.",
@@ -985,7 +1248,7 @@
             },
             {
               "prefabname": "rkc_door8",
-              "displaynametoken": "$piece_rkc_portcullis",
+              "displaynametoken": "$piece_rkc_door",
               "prefabdescription": "Simple wooden door.",
               "requirements": [
                 {
@@ -993,8 +1256,36 @@
                   "amount": 4
                 },
                 {
-                  "item": "Stone",
+                  "item": "Iron",
                   "amount": 2
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_door9",
+              "displaynametoken": "$piece_rkc_drawbridge",
+              "prefabdescription": "Simple wooden drawbridge.",
+              "requirements": [
+                {
+                  "item": "Wood",
+                  "amount": 10
+                },
+                {
+                  "item": "Iron",
+                  "amount": 6
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_door10",
+              "displaynametoken": "$piece_rkc_trapdoor",
+              "prefabdescription": "Simple wooden trap door.",
+              "requirements": [
+                {
+                  "item": "Wood",
+                  "amount": 4
                 }
               ],
               "material": "stone"
@@ -1292,42 +1583,6 @@
               "material": "stone"
             },
             {
-              "prefabname": "rkc_arch",
-              "displaynametoken": "$piece_rkc_arch",
-              "prefabdescription": "Decorative stone arch.",
-              "requirements": [
-                {
-                  "item": "Stone",
-                  "amount": 5
-                }
-              ],
-              "material": "stone"
-            },
-            {
-              "prefabname": "rkc_archdecor1",
-              "displaynametoken": "$piece_rkc_archdecor",
-              "prefabdescription": "Iron decor piece that snaps into the top inner point of the Stone Arch.",
-              "requirements": [
-                {
-                  "item": "Iron",
-                  "amount": 2
-                }
-              ],
-              "material": "metal"
-            },
-            {
-              "prefabname": "rkc_archdecor2",
-              "displaynametoken": "$piece_rkc_archdecor",
-              "prefabdescription": "Iron decor piece that snaps into the top inner point of the Stone Arch.",
-              "requirements": [
-                {
-                  "item": "Iron",
-                  "amount": 2
-                }
-              ],
-              "material": "metal"
-            },
-            {
 
               "prefabname": "rkc_hearth1",
               "displaynametoken": "$piece_rkc_hearth",
@@ -1339,8 +1594,366 @@
                 }
               ],
               "material": "stone",
-              "FuelItem": "item_wood"
+              "FuelItem": "Wood"
 
+            },
+            {
+
+              "prefabname": "rkc_hearth2",
+              "displaynametoken": "$piece_rkc_hearth",
+              "prefabdescription": "Lovely stone fireplace.",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 20
+                }
+              ],
+              "material": "stone",
+              "FuelItem": "Wood"
+
+            },
+            {
+
+              "prefabname": "rkc_hearth3",
+              "displaynametoken": "$piece_rkc_hearth",
+              "prefabdescription": "Lovely stone fireplace.",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 20
+                }
+              ],
+              "material": "stone",
+              "FuelItem": "Wood"
+
+            },
+            {
+
+              "prefabname": "rkc_hearth4",
+              "displaynametoken": "$piece_rkc_hearth",
+              "prefabdescription": "Lovely stone fireplace for placing your own fire within. Can be used with the chimney.",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 20
+                }
+              ],
+              "material": "stone"
+
+            },
+            {
+
+              "prefabname": "rkc_chimney",
+              "displaynametoken": "$piece_rkc_chimney",
+              "prefabdescription": "Lovely stone fireplace.",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 10
+                }
+              ],
+              "material": "stone"
+
+            },
+            {
+              "prefabname": "rkc_stainedglass1",
+              "displaynametoken": "$piece_rkc_staindglass",
+              "prefabdescription": "",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 5
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_stainedglass2",
+              "displaynametoken": "$piece_rkc_staindglass",
+              "prefabdescription": "",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 5
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_stainedglass3",
+              "displaynametoken": "$piece_rkc_staindglass",
+              "prefabdescription": "",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 5
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_stainedglass4",
+              "displaynametoken": "$piece_rkc_staindglass",
+              "prefabdescription": "",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 5
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_stainedglass5",
+              "displaynametoken": "$piece_rkc_staindglass",
+              "prefabdescription": "",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 5
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_stainedglass6",
+              "displaynametoken": "$piece_rkc_staindglass",
+              "prefabdescription": "",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 5
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_stainedglass7",
+              "displaynametoken": "$piece_rkc_staindglass",
+              "prefabdescription": "",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 5
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_stainedglass8",
+              "displaynametoken": "$piece_rkc_staindglass",
+              "prefabdescription": "",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 5
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_stainedglass9",
+              "displaynametoken": "$piece_rkc_staindglass",
+              "prefabdescription": "",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 5
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_towerdec1",
+              "displaynametoken": "$piece_rkc_towertop",
+              "prefabdescription": "Decorative piece for the peak of tower rooofs.",
+              "requirements": [
+                {
+                  "item": "Iron",
+                  "amount": 4
+                }
+              ],
+              "material": "metal"
+            },
+            {
+              "prefabname": "rkc_towerdec2",
+              "displaynametoken": "$piece_rkc_towertop",
+              "prefabdescription": "Decorative piece for the peak of tower rooofs.",
+              "requirements": [
+                {
+                  "item": "Iron",
+                  "amount": 4
+                }
+              ],
+              "material": "metal"
+            },
+            {
+              "prefabname": "rkc_towerdec3",
+              "displaynametoken": "$piece_rkc_towertop",
+              "prefabdescription": "Decorative piece for the peak of tower rooofs.",
+              "requirements": [
+                {
+                  "item": "Iron",
+                  "amount": 4
+                }
+              ],
+              "material": "metal"
+            },
+            {
+              "prefabname": "rkc_fence1",
+              "displaynametoken": "$piece_rkc_fence",
+              "prefabdescription": "Castle fencing.",
+              "requirements": [
+                {
+                  "item": "Iron",
+                  "amount": 4
+                }
+              ],
+              "material": "metal"
+            },
+            {
+              "prefabname": "rkc_fence2",
+              "displaynametoken": "$piece_rkc_fence",
+              "prefabdescription": "Castle fencing.",
+              "requirements": [
+                {
+                  "item": "Iron",
+                  "amount": 4
+                }
+              ],
+              "material": "metal"
+            },
+            {
+              "prefabname": "rkc_fence3",
+              "displaynametoken": "$piece_rkc_fence",
+              "prefabdescription": "Castle fencing.",
+              "requirements": [
+                {
+                  "item": "Iron",
+                  "amount": 4
+                }
+              ],
+              "material": "metal"
+            },
+            {
+              "prefabname": "rkc_fence4",
+              "displaynametoken": "$piece_rkc_fence",
+              "prefabdescription": "Castle fencing.",
+              "requirements": [
+                {
+                  "item": "Iron",
+                  "amount": 4
+                }
+              ],
+              "material": "metal"
+            },
+            {
+              "prefabname": "rkc_fence5",
+              "displaynametoken": "$piece_rkc_fence",
+              "prefabdescription": "Castle fencing.",
+              "requirements": [
+                {
+                  "item": "Iron",
+                  "amount": 4
+                }
+              ],
+              "material": "metal"
+            },
+            {
+              "prefabname": "rkc_fence6",
+              "displaynametoken": "$piece_rkc_fence",
+              "prefabdescription": "Castle fencing.",
+              "requirements": [
+                {
+                  "item": "Iron",
+                  "amount": 4
+                }
+              ],
+              "material": "metal"
+            },
+            {
+              "prefabname": "rkc_fence7",
+              "displaynametoken": "$piece_rkc_fence",
+              "prefabdescription": "Castle fencing.",
+              "requirements": [
+                {
+                  "item": "Iron",
+                  "amount": 4
+                }
+              ],
+              "material": "metal"
+            },
+            {
+              "prefabname": "rkc_fence8",
+              "displaynametoken": "$piece_rkc_fence",
+              "prefabdescription": "Castle fencing.",
+              "requirements": [
+                {
+                  "item": "Iron",
+                  "amount": 4
+                }
+              ],
+              "material": "metal"
+            },
+            {
+              "prefabname": "rkc_fence9",
+              "displaynametoken": "$piece_rkc_fence",
+              "prefabdescription": "Castle fencing.",
+              "requirements": [
+                {
+                  "item": "Iron",
+                  "amount": 4
+                }
+              ],
+              "material": "metal"
+            },
+            {
+              "prefabname": "rkc_gate1",
+              "displaynametoken": "$piece_rkc_gate",
+              "prefabdescription": "Castle fence gate.",
+              "requirements": [
+                {
+                  "item": "Iron",
+                  "amount": 4
+                }
+              ],
+              "material": "metal"
+            },
+            {
+              "prefabname": "rkc_fencepost1",
+              "displaynametoken": "$piece_rkc_fencepost",
+              "prefabdescription": "Castle fence post.",
+              "requirements": [
+                {
+                  "item": "Iron",
+                  "amount": 4
+                }
+              ],
+              "material": "metal"
+            },
+            {
+              "prefabname": "rkc_fencepost2",
+              "displaynametoken": "$piece_rkc_fencepost",
+              "prefabdescription": "Castle fence post.",
+              "requirements": [
+                {
+                  "item": "Iron",
+                  "amount": 4
+                }
+              ],
+              "material": "metal"
+            },
+            {
+              "prefabname": "rkc_fencepost3",
+              "displaynametoken": "$piece_rkc_fencepost",
+              "prefabdescription": "Castle fence post.",
+              "requirements": [
+                {
+                  "item": "Iron",
+                  "amount": 4
+                }
+              ],
+              "material": "metal"
             }
           ]
         }
