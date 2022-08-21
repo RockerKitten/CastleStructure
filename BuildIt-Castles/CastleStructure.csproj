@@ -130,7 +130,7 @@
       <Link>environment.props</Link>
     </None>
     <None Include="app.config" />
-    <EmbeddedResource Include="builditassets.json" />
+    <EmbeddedResource Include="builditstructure.json" />
     <None Include="assets_example.json" />
     <None Include="packages.config" />
     <None Include="README.md" />

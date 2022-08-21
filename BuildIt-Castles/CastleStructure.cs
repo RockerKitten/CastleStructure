@@ -48,6 +48,7 @@ namespace CastleStructure
             this.effects = InitializeEffects();
             InitializeBuildItConstructionTools();
             InitializeBuildItAssets();
+            AddLocalizations();
             fuelObject = PrefabManager.Cache.GetPrefab<GameObject>("Wood");
             PrefabManager.OnVanillaPrefabsAvailable -= SetupAssets;
         }
@@ -63,7 +64,7 @@ namespace CastleStructure
                     UseCustomCategories = true,
                     CustomCategories = new string[]
                     {
-                        "Structure", "Furniture","Decor", "Misc","Lights"
+                        "Structure", "Clutter"
                     }
                 });
             PieceManager.Instance.AddPieceTable(masonryTable);
@@ -80,8 +81,7 @@ namespace CastleStructure
                     RepairStation = "forge",
                     Requirements = new[]
                     {
-                        new RequirementConfig {Item = "Wood", Amount = 1},
-                        new RequirementConfig {Item = "Iron", Amount = 1 }
+                        new RequirementConfig {Item = "Iron", Amount = 2 }
                     }
                 });
             ItemManager.Instance.AddItem(tool);
@@ -89,7 +89,7 @@ namespace CastleStructure
 
         private void InitializeBuildItAssets()
         {
-            var buildItAssets = LoadEmbeddedJsonFile<BuildItAssets>("builditassets.json");
+            var buildItAssets = LoadEmbeddedJsonFile<BuildItAssets>("builditstructure.json");
 
             foreach (var buildItPieceTable in buildItAssets.PieceTables)
             {
@@ -205,14 +205,21 @@ namespace CastleStructure
             //doorClose = new EffectList { m_effectPrefabs = new EffectList.EffectData[1] { new EffectList.EffectData { m_prefab = sfxDoorClose } } };
         }
 
-        //private void AddLocalizations()
-        //{
-        //    CustomLocalization customLocalization = new CustomLocalization();
-        //    customLocalization.AddTranslation("English", new Dictionary<String, String>
-        //    {
-        //        { "piece_wallrkc", "Wall" }
-        //    });
-        //}
+        private void AddLocalizations()
+        {
+            CustomLocalization customLocalization = new CustomLocalization();
+            customLocalization.AddTranslation("English", new Dictionary<String, String>
+            {
+                { "piece_rkc_wall", "Wall" },{ "piece_rkc_beam", "Beam" },{ "piece_rkc_glasswall", "Glass Curved Wall" },{ "piece_rkc_walltransition", "Wall Transition" },{ "piece_rkc_wallcorner", "Stone Wall Corner" }
+                ,{ "piece_rkc_halfwall", "Half Wall" },{ "piece_rkc_towertop", "Tower Topper" },{ "piece_rkc_fence", "Fence" },{ "piece_rkc_gate", "Gate" },{ "piece_rkc_fencepost", "Fence Post" }
+                ,{ "piece_rkc_staindglass", "Staind Glass" },{ "piece_rkc_walltop", "Wall Top" },{ "piece_rkc_walltopcorner", "Wall Top Corner" },{ "piece_rkc_roof", "Roof" },{ "piece_rkc_wallsupport", "Wall Support" }
+                ,{ "piece_rkc_wallpanel", "Wall Panel" },{ "piece_rkc_corbel", "Corbel" },{ "piece_rkc_corbelcorner", "Corbel Corner" },{ "piece_rkc_floor", "Floor" },{ "piece_rkc_bridge", "Bridge" }
+                ,{ "piece_rkc_bridgerail", "Bridge Railing" },{ "piece_rkc_spiralstair", "Spiral Stair" },{ "piece_rkc_stairs", "Stairs" },{ "piece_rkc_door", "Door" },{ "piece_rkc_portcullis", "Portcullis" }
+                ,{ "piece_rkc_drawbridge", "Drawbridge" },{ "piece_rkc_trapdoor", "Trap Door" },{ "piece_rkc_window", "Window" },{ "piece_rkc_post", "Post" },{ "piece_rkc_support", "Support" }
+                ,{ "piece_rkc_pillar", "Pillar" },{ "piece_rkc_column", "Column" },{ "piece_rkc_ceilingvault", "Vaulted Ceiling" },{ "piece_rkc_hearth", "Hearth" },{ "piece_rkc_chimney", "Chimney" },
+                {"item_rkcscepter","Scepter of Power" }
+            });
+        }
 
         private CustomPiece BuildCustomPiece(BuildItPieceTable buildItPieceTable, BuildItPieceCategories buildItPieceCategory, BuildItPiece buildItPiece)
         {
@@ -245,7 +252,7 @@ namespace CastleStructure
                     mat.shader = Shader.Find("Custom/Piece");
                 }
             }
-            Jotunn.Logger.LogInfo(buildItPiecePrefab.name);
+            //Jotunn.Logger.LogInfo(buildItPiecePrefab.name);
             return customPiece;
         }
 
@@ -257,6 +264,9 @@ namespace CastleStructure
             var wearComponent = piecePrefab.GetComponent<WearNTear>();
             wearComponent.m_destroyedEffect = this.effects[buildItPiece.Material].Break;
             wearComponent.m_hitEffect = this.effects[buildItPiece.Material].Hit;
+            //var preFab = PrefabManager.Cache.GetPrefab<GameObject>("SFX");
+            //var sfxPrefab = preFab.GetComponent<AudioSource>();
+            //sfxPrefab.outputAudioMixerGroup.audioMixer.FindMatchingGroups("Effects");
 
             if (piecePrefab.TryGetComponent<Door>(out Door doorComponent))
             {

@@ -7,6 +7,54 @@
           "categorytabname": "Structure",
           "pieces": [
             {
+              "prefabname": "rkc_beam1",
+              "displaynametoken": "$piece_rkc_beam",
+              "prefabdescription": "Wooden curved beam.",
+              "requirements": [
+                {
+                  "item": "Wood",
+                  "amount": 2
+                }
+              ],
+              "material": "wood"
+            },
+            {
+              "prefabname": "rkc_beam2",
+              "displaynametoken": "$piece_rkc_beam",
+              "prefabdescription": "Wooden curved beam.",
+              "requirements": [
+                {
+                  "item": "Wood",
+                  "amount": 2
+                }
+              ],
+              "material": "wood"
+            },
+            {
+              "prefabname": "rkc_beam3",
+              "displaynametoken": "$piece_rkc_beam",
+              "prefabdescription": "Wooden curved beam.",
+              "requirements": [
+                {
+                  "item": "Wood",
+                  "amount": 2
+                }
+              ],
+              "material": "wood"
+            },
+            {
+              "prefabname": "rkc_beam4",
+              "displaynametoken": "$piece_rkc_beam",
+              "prefabdescription": "Wooden curved beam.",
+              "requirements": [
+                {
+                  "item": "Wood",
+                  "amount": 2
+                }
+              ],
+              "material": "wood"
+            },
+            {
               "prefabname": "rkc_wall1",
               "displaynametoken": "$piece_rkc_wall",
               "prefabdescription": "Stone brick wall.",
@@ -61,20 +109,7 @@
             {
               "prefabname": "rkc_wall5",
               "displaynametoken": "$piece_rkc_wall",
-              "prefabdescription": "Standard castle brick wall with pointed window.",
-              "requiredstation": "piece_stonecutter",
-              "requirements": [
-                {
-                  "item": "Stone",
-                  "amount": 6
-                }
-              ],
-              "material": "stone"
-            },
-            {
-              "prefabname": "rkc_wall15",
-              "displaynametoken": "$piece_rkc_wall",
-              "prefabdescription": "Standard castle brick wall with large pointed window.",
+              "prefabdescription": "2m to 4m transition wall.",
               "requiredstation": "piece_stonecutter",
               "requirements": [
                 {
@@ -87,20 +122,7 @@
             {
               "prefabname": "rkc_wall6",
               "displaynametoken": "$piece_rkc_wall",
-              "prefabdescription": "Standard castle brick wall with curved window.",
-              "requiredstation": "piece_stonecutter",
-              "requirements": [
-                {
-                  "item": "Stone",
-                  "amount": 6
-                }
-              ],
-              "material": "stone"
-            },
-            {
-              "prefabname": "rkc_wall14",
-              "displaynametoken": "$piece_rkc_wall",
-              "prefabdescription": "Standard castle brick wall with large curved window.",
+              "prefabdescription": "4m to 2m transition wall.",
               "requiredstation": "piece_stonecutter",
               "requirements": [
                 {
@@ -113,7 +135,7 @@
             {
               "prefabname": "rkc_wall7",
               "displaynametoken": "$piece_rkc_wall",
-              "prefabdescription": "Standard 3m tall castle brick wall.",
+              "prefabdescription": "Standard castle brick wall.",
               "requiredstation": "piece_stonecutter",
               "requirements": [
                 {
@@ -126,7 +148,7 @@
             {
               "prefabname": "rkc_wall8",
               "displaynametoken": "$piece_rkc_wall",
-              "prefabdescription": "1/8th arc, 4m radius, 3m tall castle brick wall.",
+              "prefabdescription": "4m radius 3m tall 1/8th circle wall.",
               "requiredstation": "piece_stonecutter",
               "requirements": [
                 {
@@ -139,12 +161,12 @@
             {
               "prefabname": "rkc_wall9",
               "displaynametoken": "$piece_rkc_wall",
-              "prefabdescription": "1/8th arc, 4m radius, 1m tall castle brick wall.",
+              "prefabdescription": "4m radius 1m tall 1/8th circle wall.",
               "requiredstation": "piece_stonecutter",
               "requirements": [
                 {
                   "item": "Stone",
-                  "amount": 2
+                  "amount": 6
                 }
               ],
               "material": "stone"
@@ -152,7 +174,7 @@
             {
               "prefabname": "rkc_wall10",
               "displaynametoken": "$piece_rkc_wall",
-              "prefabdescription": "1/8th arc, 4m radius, 3m tall with doorway.",
+              "prefabdescription": "4m radius 3m tall 1/16th circle wall.",
               "requiredstation": "piece_stonecutter",
               "requirements": [
                 {
@@ -165,7 +187,7 @@
             {
               "prefabname": "rkc_wall11",
               "displaynametoken": "$piece_rkc_wall",
-              "prefabdescription": "1/8th arc, 2m radius, 3m tall castle brick wall.",
+              "prefabdescription": "2m radius 3m tall 1/8th circle wall.",
               "requiredstation": "piece_stonecutter",
               "requirements": [
                 {
@@ -178,7 +200,7 @@
             {
               "prefabname": "rkc_wall12",
               "displaynametoken": "$piece_rkc_wall",
-              "prefabdescription": "1/8th arc, 2m radius, 1m tall castle brick wall.",
+              "prefabdescription": "4m radius 1m tall 1/8th circle wall.",
               "requiredstation": "piece_stonecutter",
               "requirements": [
                 {
@@ -191,7 +213,46 @@
             {
               "prefabname": "rkc_wall13",
               "displaynametoken": "$piece_rkc_wall",
-              "prefabdescription": "1/4th arc, 2m radius to 4m radius, 2m tall castle brick wall.",
+              "prefabdescription": "4m radius 3m tall 1/8th circle wall with doorway.",
+              "requiredstation": "piece_stonecutter",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 6
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_wall14",
+              "displaynametoken": "$piece_rkc_wall",
+              "prefabdescription": "3m tall standard brick wall with rounded window opening.",
+              "requiredstation": "piece_stonecutter",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 6
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_wall15",
+              "displaynametoken": "$piece_rkc_wall",
+              "prefabdescription": "3m tall standard brick wall with pointed window opening.",
+              "requiredstation": "piece_stonecutter",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 2
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_wall16",
+              "displaynametoken": "$piece_rkc_wall",
+              "prefabdescription": "3m tall standard brick wall with large rounded window opening.",
               "requiredstation": "piece_stonecutter",
               "requirements": [
                 {
@@ -204,12 +265,142 @@
             {
               "prefabname": "rkc_wall17",
               "displaynametoken": "$piece_rkc_wall",
-              "prefabdescription": "1/4th arc, 2m radius to 4m radius, 2m tall castle brick wall.",
+              "prefabdescription": "3m tall standard brick wall with large pointed window opening.",
               "requiredstation": "piece_stonecutter",
               "requirements": [
                 {
                   "item": "Stone",
                   "amount": 6
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_wall18",
+              "displaynametoken": "$piece_rkc_wall",
+              "prefabdescription": "3m tall, 2m radius, 1/8th circle wall with rounded window opening.",
+              "requiredstation": "piece_stonecutter",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 6
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_wall19",
+              "displaynametoken": "$piece_rkc_wall",
+              "prefabdescription": "3m tall, 2m radius, 1/8th circle wall with pointed window opening.",
+              "requiredstation": "piece_stonecutter",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 6
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_wall20",
+              "displaynametoken": "$piece_rkc_wall",
+              "prefabdescription": "3m tall, 4m radius, 1/16th circle wall with rounded window opening.",
+              "requiredstation": "piece_stonecutter",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 6
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_wall21",
+              "displaynametoken": "$piece_rkc_wall",
+              "prefabdescription": "3m tall, 4m radius, 1/16th circle wall with pointed window opening.",
+              "requiredstation": "piece_stonecutter",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 6
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_wall22",
+              "displaynametoken": "$piece_rkc_wall",
+              "prefabdescription": "3m tall, 2m radius, 1/8th circle wall with large rounded window opening.",
+              "requiredstation": "piece_stonecutter",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 6
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_wall23",
+              "displaynametoken": "$piece_rkc_wall",
+              "prefabdescription": "3m tall, 2m radius, 1/8th circle wall with large pointed window opening.",
+              "requiredstation": "piece_stonecutter",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 6
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_wall24",
+              "displaynametoken": "$piece_rkc_wall",
+              "prefabdescription": "3m tall, 4m radius, 1/16th circle wall with large rounded window opening.",
+              "requiredstation": "piece_stonecutter",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 6
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_wall25",
+              "displaynametoken": "$piece_rkc_wall",
+              "prefabdescription": "3m tall, 4m radius, 1/16th circle wall with large pointed window opening.",
+              "requiredstation": "piece_stonecutter",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 6
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_glass1",
+              "displaynametoken": "$piece_rkc_glasswall",
+              "prefabdescription": "2m radius 1m tall glass wall.",
+              "requiredstation": "piece_stonecutter",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 3
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_glass2",
+              "displaynametoken": "$piece_rkc_glasswall",
+              "prefabdescription": "2m radius 1m tall glass wall.",
+              "requiredstation": "piece_stonecutter",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 3
                 }
               ],
               "material": "stone"
@@ -373,7 +564,7 @@
             {
               "prefabname": "rkc_roof1",
               "displaynametoken": "$piece_rkc_roof",
-              "prefabdescription": "Metal arc roof",
+              "prefabdescription": "2m radius 26 degree curved roof point.",
               "requirements": [
                 {
                   "item": "Iron",
@@ -385,7 +576,7 @@
             {
               "prefabname": "rkc_roof2",
               "displaynametoken": "$piece_rkc_roof",
-              "prefabdescription": "Metal arc roof",
+              "prefabdescription": "2m radius 45 degree curved roof point.",
               "requirements": [
                 {
                   "item": "Iron",
@@ -397,7 +588,7 @@
             {
               "prefabname": "rkc_roof3",
               "displaynametoken": "$piece_rkc_roof",
-              "prefabdescription": "Metal arc roof",
+              "prefabdescription": "2m radius 60 degree curved roof point.",
               "requirements": [
                 {
                   "item": "Iron",
@@ -409,7 +600,7 @@
             {
               "prefabname": "rkc_roof4",
               "displaynametoken": "$piece_rkc_roof",
-              "prefabdescription": "Metal arc roof",
+              "prefabdescription": "4m to 2m radius 26 degree curved roof.",
               "requirements": [
                 {
                   "item": "Iron",
@@ -421,7 +612,7 @@
             {
               "prefabname": "rkc_roof5",
               "displaynametoken": "$piece_rkc_roof",
-              "prefabdescription": "Metal arc roof",
+              "prefabdescription": "4m to 2m radius 45 degree curved roof.",
               "requirements": [
                 {
                   "item": "Iron",
@@ -433,7 +624,7 @@
             {
               "prefabname": "rkc_roof6",
               "displaynametoken": "$piece_rkc_roof",
-              "prefabdescription": "Metal arc roof",
+              "prefabdescription": "4m radius outer roof edge.",
               "requirements": [
                 {
                   "item": "Iron",
@@ -445,7 +636,7 @@
             {
               "prefabname": "rkc_roof7",
               "displaynametoken": "$piece_rkc_roof",
-              "prefabdescription": "Metal flat roof",
+              "prefabdescription": "26 degree sloped roof.",
               "requirements": [
                 {
                   "item": "Iron",
@@ -457,7 +648,7 @@
             {
               "prefabname": "rkc_roof8",
               "displaynametoken": "$piece_rkc_roof",
-              "prefabdescription": "Metal flat roof",
+              "prefabdescription": "45 degree sloped roof.",
               "requirements": [
                 {
                   "item": "Iron",
@@ -469,7 +660,7 @@
             {
               "prefabname": "rkc_roof9",
               "displaynametoken": "$piece_rkc_roof",
-              "prefabdescription": "Metal flat roof",
+              "prefabdescription": "26 degree outer corner roof.",
               "requirements": [
                 {
                   "item": "Iron",
@@ -481,7 +672,7 @@
             {
               "prefabname": "rkc_roof10",
               "displaynametoken": "$piece_rkc_roof",
-              "prefabdescription": "Metal flat roof",
+              "prefabdescription": "45 degree outer corner roof.",
               "requirements": [
                 {
                   "item": "Iron",
@@ -493,7 +684,7 @@
             {
               "prefabname": "rkc_roof11",
               "displaynametoken": "$piece_rkc_roof",
-              "prefabdescription": "Metal flat roof",
+              "prefabdescription": "26 degree inner corner roof.",
               "requirements": [
                 {
                   "item": "Iron",
@@ -505,7 +696,7 @@
             {
               "prefabname": "rkc_roof12",
               "displaynametoken": "$piece_rkc_roof",
-              "prefabdescription": "Metal flat roof",
+              "prefabdescription": "45 degree inner corner roof.",
               "requirements": [
                 {
                   "item": "Iron",
@@ -517,7 +708,7 @@
             {
               "prefabname": "rkc_roof13",
               "displaynametoken": "$piece_rkc_roof",
-              "prefabdescription": "Metal flat roof",
+              "prefabdescription": "26 degree center roof ridge.",
               "requirements": [
                 {
                   "item": "Iron",
@@ -529,7 +720,7 @@
             {
               "prefabname": "rkc_roof14",
               "displaynametoken": "$piece_rkc_roof",
-              "prefabdescription": "Metal flat roof",
+              "prefabdescription": "45 degree center roof ridge.",
               "requirements": [
                 {
                   "item": "Iron",
@@ -541,7 +732,7 @@
             {
               "prefabname": "rkc_roof15",
               "displaynametoken": "$piece_rkc_roof",
-              "prefabdescription": "Metal flat roof",
+              "prefabdescription": "45 degree 2m outer curve to 4m outer curve. Can snap at the top to a 4m curved roof.",
               "requirements": [
                 {
                   "item": "Iron",
@@ -553,7 +744,7 @@
             {
               "prefabname": "rkc_roof16",
               "displaynametoken": "$piece_rkc_roof",
-              "prefabdescription": "Metal flat roof",
+              "prefabdescription": "2m radius, outer roof edge.",
               "requirements": [
                 {
                   "item": "Iron",
@@ -565,7 +756,7 @@
             {
               "prefabname": "rkc_roof17",
               "displaynametoken": "$piece_rkc_roof",
-              "prefabdescription": "Metal flat roof",
+              "prefabdescription": "2m radius, shorter outer roof edge.",
               "requirements": [
                 {
                   "item": "Iron",
@@ -577,7 +768,7 @@
             {
               "prefabname": "rkc_roof18",
               "displaynametoken": "$piece_rkc_roof",
-              "prefabdescription": "Metal flat roof",
+              "prefabdescription": "4m radius, shorter outer roof edge.",
               "requirements": [
                 {
                   "item": "Iron",
@@ -589,7 +780,7 @@
             {
               "prefabname": "rkc_roof19",
               "displaynametoken": "$piece_rkc_roof",
-              "prefabdescription": "Metal flat roof",
+              "prefabdescription": "26 degree 2m outer curve to 4m outer curve. Can snap at the top to a 4m curved roof.",
               "requirements": [
                 {
                   "item": "Iron",
@@ -601,7 +792,7 @@
             {
               "prefabname": "rkc_wallsupport",
               "displaynametoken": "$piece_rkc_wallsupport",
-              "prefabdescription": "Castle wall support.",
+              "prefabdescription": "Decorative outer castle wall support piece.",
               "requiredstation": "piece_stonecutter",
               "requirements": [
                 {
@@ -783,9 +974,69 @@
               "material": "stone"
             },
             {
+              "prefabname": "rkc_floor12",
+              "displaynametoken": "$piece_rkc_floor",
+              "prefabdescription": "Brick floor that matches the brick walls.",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 8
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_floor10",
+              "displaynametoken": "$piece_rkc_floor",
+              "prefabdescription": "Low platform. Floors can be placed on top to match the height of stairs.",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 8
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_floor11",
+              "displaynametoken": "$piece_rkc_floor",
+              "prefabdescription": "Slate floor that matches the stairs and platform.",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 8
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_floor13",
+              "displaynametoken": "$piece_rkc_floor",
+              "prefabdescription": "2m radius low platform. Floors can be placed on top to match the height of stairs.",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 8
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_floor14",
+              "displaynametoken": "$piece_rkc_floor",
+              "prefabdescription": "4m radius low platform. Floors can be placed on top to match the height of stairs.",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 8
+                }
+              ],
+              "material": "stone"
+            },
+            {
               "prefabname": "rkc_floor8",
               "displaynametoken": "$piece_rkc_floor",
-              "prefabdescription": "Slate 1/4 circle 2m radius floor tile.",
+              "prefabdescription": "Slate 1/8 circle 2m radius floor tile.",
               "requirements": [
                 {
                   "item": "Stone",
@@ -807,18 +1058,6 @@
               "material": "stone"
             },
             {
-              "prefabname": "rkc_floor10",
-              "displaynametoken": "$piece_rkc_floor",
-              "prefabdescription": "Low platform. Floors can be placed on top to match the height of stairs.",
-              "requirements": [
-                {
-                  "item": "Stone",
-                  "amount": 8
-                }
-              ],
-              "material": "stone"
-            },
-            {
               "prefabname": "rkc_bridge",
               "displaynametoken": "$piece_rkc_bridge",
               "prefabdescription": "Simple wooden arched bridge for crossing small gaps",
@@ -833,7 +1072,7 @@
             {
               "prefabname": "rkc_bridge2",
               "displaynametoken": "$piece_rkc_bridge",
-              "prefabdescription": "End section of a snappable bridge.",
+              "prefabdescription": "2m center section of a snappable bridge.",
               "requirements": [
                 {
                   "item": "Wood",
@@ -849,7 +1088,7 @@
             {
               "prefabname": "rkc_bridge3",
               "displaynametoken": "$piece_rkc_bridge",
-              "prefabdescription": "Middle section of a snappable bridge.",
+              "prefabdescription": "4m middle section of a snappable bridge.",
               "requirements": [
                 {
                   "item": "Wood",
@@ -865,7 +1104,7 @@
             {
               "prefabname": "rkc_bridge4",
               "displaynametoken": "$piece_rkc_bridge",
-              "prefabdescription": "Middle section of a snappable bridge.",
+              "prefabdescription": "Sloped section of a snappable bridge. Makes a great entrance or exit ramp.",
               "requirements": [
                 {
                   "item": "Wood",
@@ -881,7 +1120,7 @@
             {
               "prefabname": "rkc_bridge5",
               "displaynametoken": "$piece_rkc_bridge",
-              "prefabdescription": "Middle section of a snappable bridge.",
+              "prefabdescription": "Wooden bridge support.",
               "requirements": [
                 {
                   "item": "Wood",
@@ -889,7 +1128,23 @@
                 },
                 {
                   "item": "IronNails",
-                  "amount": 10
+                  "amount": 5
+                }
+              ],
+              "material": "wood"
+            },
+            {
+              "prefabname": "rkc_bridge14",
+              "displaynametoken": "$piece_rkc_bridge",
+              "prefabdescription": "Extra wooden bridge support poles, for extending the bridge support height.",
+              "requirements": [
+                {
+                  "item": "Wood",
+                  "amount": 8
+                },
+                {
+                  "item": "IronNails",
+                  "amount": 2
                 }
               ],
               "material": "wood"
@@ -897,11 +1152,11 @@
             {
               "prefabname": "rkc_bridge6",
               "displaynametoken": "$piece_rkc_bridge",
-              "prefabdescription": "",
+              "prefabdescription": "2m section of stone snappable bridge.",
               "requirements": [
                 {
                   "item": "Stone",
-                  "amount": 5
+                  "amount": 10
                 }
               ],
               "material": "stone"
@@ -909,11 +1164,11 @@
             {
               "prefabname": "rkc_bridge7",
               "displaynametoken": "$piece_rkc_bridge",
-              "prefabdescription": "",
+              "prefabdescription": "4m section of stone snappable bridge.",
               "requirements": [
                 {
                   "item": "Stone",
-                  "amount": 5
+                  "amount": 20
                 }
               ],
               "material": "stone"
@@ -921,11 +1176,11 @@
             {
               "prefabname": "rkc_bridge8",
               "displaynametoken": "$piece_rkc_bridge",
-              "prefabdescription": "",
+              "prefabdescription": "2m low sloped section of snappable stone bridge.",
               "requirements": [
                 {
                   "item": "Stone",
-                  "amount": 5
+                  "amount": 10
                 }
               ],
               "material": "stone"
@@ -933,11 +1188,11 @@
             {
               "prefabname": "rkc_bridge9",
               "displaynametoken": "$piece_rkc_bridge",
-              "prefabdescription": "",
+              "prefabdescription": "2m medium sloped section of snappable stone bridge.",
               "requirements": [
                 {
                   "item": "Stone",
-                  "amount": 5
+                  "amount": 10
                 }
               ],
               "material": "stone"
@@ -945,11 +1200,23 @@
             {
               "prefabname": "rkc_bridge10",
               "displaynametoken": "$piece_rkc_bridge",
-              "prefabdescription": "",
+              "prefabdescription": "1/2 arch for snappable stone bridge. Provides support for the bridge.",
               "requirements": [
                 {
                   "item": "Stone",
-                  "amount": 5
+                  "amount": 20
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_bridge15",
+              "displaynametoken": "$piece_rkc_bridge",
+              "prefabdescription": "Longer support for snappable stone bridge arch.",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 10
                 }
               ],
               "material": "stone"
@@ -957,7 +1224,7 @@
             {
               "prefabname": "rkc_bridge11",
               "displaynametoken": "$piece_rkc_bridge",
-              "prefabdescription": "",
+              "prefabdescription": "Fancier stone bridge with 1/2 arch.",
               "requirements": [
                 {
                   "item": "Stone",
@@ -969,7 +1236,7 @@
             {
               "prefabname": "rkc_bridge12",
               "displaynametoken": "$piece_rkc_bridge",
-              "prefabdescription": "",
+              "prefabdescription": "2m section of fancy snappable stone bridge.",
               "requirements": [
                 {
                   "item": "Stone",
@@ -981,7 +1248,7 @@
             {
               "prefabname": "rkc_bridge13",
               "displaynametoken": "$piece_rkc_bridge",
-              "prefabdescription": "",
+              "prefabdescription": "4m section of fancy snappable stone bridge.",
               "requirements": [
                 {
                   "item": "Stone",
@@ -993,7 +1260,7 @@
             {
               "prefabname": "rkc_bridgerail1",
               "displaynametoken": "$piece_rkc_bridgerail",
-              "prefabdescription": "",
+              "prefabdescription": "2m section of snappable wooden fencing for the wooden bridges.",
               "requirements": [
                 {
                   "item": "Stone",
@@ -1005,7 +1272,7 @@
             {
               "prefabname": "rkc_bridgerail2",
               "displaynametoken": "$piece_rkc_bridgerail",
-              "prefabdescription": "",
+              "prefabdescription": "2m low sloped fence for low sloped wooden bridge section.",
               "requirements": [
                 {
                   "item": "Stone",
@@ -1017,7 +1284,7 @@
             {
               "prefabname": "rkc_bridgerail3",
               "displaynametoken": "$piece_rkc_bridgerail",
-              "prefabdescription": "",
+              "prefabdescription": "2m 26 degree sloped fence for same slope wooden bridge.",
               "requirements": [
                 {
                   "item": "Stone",
@@ -1089,7 +1356,7 @@
             {
               "prefabname": "rkc_stairs5",
               "displaynametoken": "$piece_rkc_stairs",
-              "prefabdescription": "Simple stone stairs.",
+              "prefabdescription": "Simple stone stairs. Pairs well with the platforms and a floor of your choice to make a fancy dais.",
               "requirements": [
                 {
                   "item": "Stone",
@@ -1101,7 +1368,7 @@
             {
               "prefabname": "rkc_stairs4",
               "displaynametoken": "$piece_rkc_stairs",
-              "prefabdescription": "Simple inner corner stone stairs.",
+              "prefabdescription": "Simple inner corner stone stairs. Pairs well with the platforms and a floor of your choice to make a fancy dais.",
               "requirements": [
                 {
                   "item": "Stone",
@@ -1113,7 +1380,7 @@
             {
               "prefabname": "rkc_stairs6",
               "displaynametoken": "$piece_rkc_stairs",
-              "prefabdescription": "Simple outer corner stone stairs.",
+              "prefabdescription": "Simple outer corner stone stairs. Pairs well with the platforms and a floor of your choice to make a fancy dais.",
               "requirements": [
                 {
                   "item": "Stone",
@@ -1125,7 +1392,7 @@
             {
               "prefabname": "rkc_stairs2",
               "displaynametoken": "$piece_rkc_stairs",
-              "prefabdescription": "Simple 2m radius stone stairs.",
+              "prefabdescription": "Simple 2m radius stone stairs. Pairs well with the platforms to make a fancy dais.",
               "requirements": [
                 {
                   "item": "Stone",
@@ -1137,7 +1404,7 @@
             {
               "prefabname": "rkc_stairs3",
               "displaynametoken": "$piece_rkc_stairs",
-              "prefabdescription": "Simple 4m radius stone stairs.",
+              "prefabdescription": "Simple 4m radius stone stairs. Pairs well with the platforms to make a fancy dais.",
               "requirements": [
                 {
                   "item": "Stone",
@@ -1194,6 +1461,10 @@
                 {
                   "item": "Stone",
                   "amount": 2
+                },
+                {
+                  "item": "Iron",
+                  "amount": 2
                 }
               ],
               "material": "stone"
@@ -1209,6 +1480,30 @@
                 },
                 {
                   "item": "Stone",
+                  "amount": 4
+                },
+                {
+                  "item": "Iron",
+                  "amount": 2
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_door13",
+              "displaynametoken": "$piece_rkc_door",
+              "prefabdescription": "Double doors set in a 2m radius curved wall.",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 4
+                },
+                {
+                  "item": "Wood",
+                  "amount": 4
+                },
+                {
+                  "item": "Iron",
                   "amount": 2
                 }
               ],
@@ -1225,7 +1520,11 @@
                 },
                 {
                   "item": "Stone",
-                  "amount": 2
+                  "amount": 6
+                },
+                {
+                  "item": "Iron",
+                  "amount": 4
                 }
               ],
               "material": "stone"
@@ -1236,12 +1535,12 @@
               "prefabdescription": "Castle Portcullis.",
               "requirements": [
                 {
-                  "item": "Wood",
-                  "amount": 4
+                  "item": "Stone",
+                  "amount": 20
                 },
                 {
-                  "item": "Stone",
-                  "amount": 2
+                  "item": "Iron",
+                  "amount": 10
                 }
               ],
               "material": "stone"
@@ -1260,7 +1559,7 @@
                   "amount": 2
                 }
               ],
-              "material": "stone"
+              "material": "wood"
             },
             {
               "prefabname": "rkc_door9",
@@ -1276,7 +1575,7 @@
                   "amount": 6
                 }
               ],
-              "material": "stone"
+              "material": "wood"
             },
             {
               "prefabname": "rkc_door10",
@@ -1288,7 +1587,43 @@
                   "amount": 4
                 }
               ],
+              "material": "wood"
+            },
+            {
+              "prefabname": "rkc_door11",
+              "displaynametoken": "$piece_rkc_door",
+              "prefabdescription": "Secret 2m arch door.",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 4
+                }
+              ],
               "material": "stone"
+            },
+            {
+              "prefabname": "rkc_door12",
+              "displaynametoken": "$piece_rkc_door",
+              "prefabdescription": "Secret 4m arch door.",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 4
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_door14",
+              "displaynametoken": "$piece_rkc_door",
+              "prefabdescription": "Wooden door with some iron strapping.",
+              "requirements": [
+                {
+                  "item": "Wood",
+                  "amount": 6
+                }
+              ],
+              "material": "wood"
             },
             {
               "prefabname": "rkc_window",
@@ -1451,16 +1786,56 @@
               "material": "wood"
             },
             {
+              "prefabname": "rkc_post1",
+              "displaynametoken": "$piece_rkc_post",
+              "prefabdescription": "6m tall square wooden floor support.",
+              "requirements": [
+                {
+                  "item": "Wood",
+                  "amount": 8
+                }
+              ],
+              "material": "wood"
+            },
+            {
+              "prefabname": "rkc_post2",
+              "displaynametoken": "$piece_rkc_post",
+              "prefabdescription": "6m tall rounded wooden floor support.",
+              "requirements": [
+                {
+                  "item": "Wood",
+                  "amount": 8
+                }
+              ],
+              "material": "wood"
+            },
+            {
+              "prefabname": "rkc_post3",
+              "displaynametoken": "$piece_rkc_support",
+              "prefabdescription": "45 degree wooden, wall to floor brace.",
+              "requirements": [
+                {
+                  "item": "Wood",
+                  "amount": 4
+                }
+              ],
+              "material": "wood"
+            },
+            {
               "prefabname": "rkc_pillar",
               "displaynametoken": "$piece_rkc_pillar",
               "prefabdescription": "Simple stone and wood pillar.",
               "requirements": [
                 {
+                  "item": "Wood",
+                  "amount": 4
+                },
+                {
                   "item": "Stone",
-                  "amount": 10
+                  "amount": 4
                 }
               ],
-              "material": "stone"
+              "material": "wood"
             },
             {
               "prefabname": "rkc_pillar2",
@@ -1549,19 +1924,19 @@
             {
               "prefabname": "rkc_column1",
               "displaynametoken": "$piece_rkc_column",
-              "prefabdescription": "Full colum with support for a full 4 floor tiles wide, by 4 tiles deep. ",
+              "prefabdescription": "6m column for single quarter vaulted ceiling.",
               "requirements": [
                 {
                   "item": "Stone",
-                  "amount": 20
+                  "amount": 10
                 }
               ],
               "material": "stone"
             },
             {
               "prefabname": "rkc_column2",
-              "displaynametoken": "$piece_rkc_column",
-              "prefabdescription": "Half colum with support on top for 4 tiles wide, and 2 tiles deep.",
+              "displaynametoken": "$piece_rkc_ceilingvault",
+              "prefabdescription": "Quater vaulted ceiling",
               "requirements": [
                 {
                   "item": "Stone",
@@ -1573,11 +1948,23 @@
             {
               "prefabname": "rkc_column3",
               "displaynametoken": "$piece_rkc_column",
-              "prefabdescription": "One quarter colum with support space for 2 tiles wide and 2 tiles deep.",
+              "prefabdescription": "6m column for 4 of the quarter vaulted ceilings.",
               "requirements": [
                 {
                   "item": "Stone",
-                  "amount": 5
+                  "amount": 20
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_column4",
+              "displaynametoken": "$piece_rkc_column",
+              "prefabdescription": "6m column with swords for 4 of the quarter vaulted ceilings.",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 20
                 }
               ],
               "material": "stone"
@@ -1645,7 +2032,7 @@
 
               "prefabname": "rkc_chimney",
               "displaynametoken": "$piece_rkc_chimney",
-              "prefabdescription": "Lovely stone fireplace.",
+              "prefabdescription": "Chimney for the fireplace for your own fires.",
               "requirements": [
                 {
                   "item": "Stone",
@@ -1658,7 +2045,7 @@
             {
               "prefabname": "rkc_stainedglass1",
               "displaynametoken": "$piece_rkc_staindglass",
-              "prefabdescription": "",
+              "prefabdescription": "Rectangular staind glass with left facing griffen. Bright side intended to be towards the inside, must be placed on walls from the inside.",
               "requirements": [
                 {
                   "item": "Stone",
@@ -1670,7 +2057,7 @@
             {
               "prefabname": "rkc_stainedglass2",
               "displaynametoken": "$piece_rkc_staindglass",
-              "prefabdescription": "",
+              "prefabdescription": "Rectangular staind glass with right facing griffen. Bright side intended to be towards the inside, must be placed on walls from the inside.",
               "requirements": [
                 {
                   "item": "Stone",
@@ -1682,7 +2069,7 @@
             {
               "prefabname": "rkc_stainedglass3",
               "displaynametoken": "$piece_rkc_staindglass",
-              "prefabdescription": "",
+              "prefabdescription": "Pointed staind glass with left facing griffen. Bright side intended to be towards the inside, must be placed on walls from the inside.",
               "requirements": [
                 {
                   "item": "Stone",
@@ -1694,7 +2081,7 @@
             {
               "prefabname": "rkc_stainedglass4",
               "displaynametoken": "$piece_rkc_staindglass",
-              "prefabdescription": "",
+              "prefabdescription": "Pointed staind glass with right facing griffen. Bright side intended to be towards the inside, must be placed on walls from the inside.",
               "requirements": [
                 {
                   "item": "Stone",
@@ -1706,7 +2093,7 @@
             {
               "prefabname": "rkc_stainedglass5",
               "displaynametoken": "$piece_rkc_staindglass",
-              "prefabdescription": "",
+              "prefabdescription": "Tall pointed staind glass with left facing griffen. Bright side intended to be towards the inside, must be placed on walls from the inside.",
               "requirements": [
                 {
                   "item": "Stone",
@@ -1718,7 +2105,7 @@
             {
               "prefabname": "rkc_stainedglass6",
               "displaynametoken": "$piece_rkc_staindglass",
-              "prefabdescription": "",
+              "prefabdescription": "Tall pointed staind glass with right facing griffen. Bright side intended to be towards the inside, must be placed on walls from the inside.",
               "requirements": [
                 {
                   "item": "Stone",
@@ -1730,7 +2117,7 @@
             {
               "prefabname": "rkc_stainedglass7",
               "displaynametoken": "$piece_rkc_staindglass",
-              "prefabdescription": "",
+              "prefabdescription": "Square stained glass window. Bright side intended to be towards the inside, must be placed on walls from the inside.",
               "requirements": [
                 {
                   "item": "Stone",
@@ -1742,7 +2129,7 @@
             {
               "prefabname": "rkc_stainedglass8",
               "displaynametoken": "$piece_rkc_staindglass",
-              "prefabdescription": "",
+              "prefabdescription": "Diamond shaped stained glass window. Bright side intended to be towards the inside, must be placed on walls from the inside.",
               "requirements": [
                 {
                   "item": "Stone",
@@ -1754,7 +2141,7 @@
             {
               "prefabname": "rkc_stainedglass9",
               "displaynametoken": "$piece_rkc_staindglass",
-              "prefabdescription": "",
+              "prefabdescription": "Circular shaped stained glass window. Bright side intended to be towards the inside, must be placed on walls from the inside.",
               "requirements": [
                 {
                   "item": "Stone",
@@ -1778,7 +2165,7 @@
             {
               "prefabname": "rkc_towerdec2",
               "displaynametoken": "$piece_rkc_towertop",
-              "prefabdescription": "Decorative piece for the peak of tower rooofs.",
+              "prefabdescription": "Decorative cross piece for the peak of tower rooofs.",
               "requirements": [
                 {
                   "item": "Iron",
@@ -1802,35 +2189,39 @@
             {
               "prefabname": "rkc_fence1",
               "displaynametoken": "$piece_rkc_fence",
-              "prefabdescription": "Castle fencing.",
+              "prefabdescription": "Wooden fencing that's seen better days.",
               "requirements": [
                 {
-                  "item": "Iron",
+                  "item": "Wood",
                   "amount": 4
                 }
               ],
-              "material": "metal"
+              "material": "wood"
             },
             {
               "prefabname": "rkc_fence2",
               "displaynametoken": "$piece_rkc_fence",
-              "prefabdescription": "Castle fencing.",
+              "prefabdescription": "Wooden fencing that's seen better days.",
               "requirements": [
                 {
-                  "item": "Iron",
+                  "item": "Wood",
                   "amount": 4
                 }
               ],
-              "material": "metal"
+              "material": "wood"
             },
             {
               "prefabname": "rkc_fence3",
               "displaynametoken": "$piece_rkc_fence",
-              "prefabdescription": "Castle fencing.",
+              "prefabdescription": "Iron fencing on top of stone.",
               "requirements": [
                 {
                   "item": "Iron",
                   "amount": 4
+                },
+                {
+                  "item": "Stone",
+                  "amount": 2
                 }
               ],
               "material": "metal"
@@ -1838,7 +2229,7 @@
             {
               "prefabname": "rkc_fence4",
               "displaynametoken": "$piece_rkc_fence",
-              "prefabdescription": "Castle fencing.",
+              "prefabdescription": "Simple iron fencing.",
               "requirements": [
                 {
                   "item": "Iron",
@@ -1850,7 +2241,7 @@
             {
               "prefabname": "rkc_fence5",
               "displaynametoken": "$piece_rkc_fence",
-              "prefabdescription": "Castle fencing.",
+              "prefabdescription": "Fancy iron fencing.",
               "requirements": [
                 {
                   "item": "Iron",
@@ -1862,43 +2253,7 @@
             {
               "prefabname": "rkc_fence6",
               "displaynametoken": "$piece_rkc_fence",
-              "prefabdescription": "Castle fencing.",
-              "requirements": [
-                {
-                  "item": "Iron",
-                  "amount": 4
-                }
-              ],
-              "material": "metal"
-            },
-            {
-              "prefabname": "rkc_fence7",
-              "displaynametoken": "$piece_rkc_fence",
-              "prefabdescription": "Castle fencing.",
-              "requirements": [
-                {
-                  "item": "Iron",
-                  "amount": 4
-                }
-              ],
-              "material": "metal"
-            },
-            {
-              "prefabname": "rkc_fence8",
-              "displaynametoken": "$piece_rkc_fence",
-              "prefabdescription": "Castle fencing.",
-              "requirements": [
-                {
-                  "item": "Iron",
-                  "amount": 4
-                }
-              ],
-              "material": "metal"
-            },
-            {
-              "prefabname": "rkc_fence9",
-              "displaynametoken": "$piece_rkc_fence",
-              "prefabdescription": "Castle fencing.",
+              "prefabdescription": "Even fancier iron fencing.",
               "requirements": [
                 {
                   "item": "Iron",
@@ -1910,7 +2265,47 @@
             {
               "prefabname": "rkc_gate1",
               "displaynametoken": "$piece_rkc_gate",
-              "prefabdescription": "Castle fence gate.",
+              "prefabdescription": "Fancy gate to go with the fancy iron fence.",
+              "requirements": [
+                {
+                  "item": "Iron",
+                  "amount": 4
+                }
+              ],
+              "material": "metal"
+            },
+            {
+              "prefabname": "rkc_fence7",
+              "displaynametoken": "$piece_rkc_fence",
+              "prefabdescription": "Stone and iron fence.",
+              "requirements": [
+                {
+                  "item": "Iron",
+                  "amount": 4
+                },
+                {
+                  "item": "Stone",
+                  "amount": 4
+                }
+              ],
+              "material": "metal"
+            },
+            {
+              "prefabname": "rkc_fence8",
+              "displaynametoken": "$piece_rkc_fence",
+              "prefabdescription": "Fancy wooden fencing that can also be used as wood panneling.",
+              "requirements": [
+                {
+                  "item": "Wood",
+                  "amount": 4
+                }
+              ],
+              "material": "wood"
+            },
+            {
+              "prefabname": "rkc_fence9",
+              "displaynametoken": "$piece_rkc_fence",
+              "prefabdescription": "Standard iron castle fencing.",
               "requirements": [
                 {
                   "item": "Iron",
@@ -1922,38 +2317,38 @@
             {
               "prefabname": "rkc_fencepost1",
               "displaynametoken": "$piece_rkc_fencepost",
-              "prefabdescription": "Castle fence post.",
+              "prefabdescription": "Stone fence post to go with the simple iron fence, or the simple iron fence on stone.",
               "requirements": [
                 {
-                  "item": "Iron",
+                  "item": "Stone",
                   "amount": 4
                 }
               ],
-              "material": "metal"
+              "material": "stone"
             },
             {
               "prefabname": "rkc_fencepost2",
               "displaynametoken": "$piece_rkc_fencepost",
-              "prefabdescription": "Castle fence post.",
+              "prefabdescription": "Large stone fence post to go with the iron and stone fence.",
               "requirements": [
                 {
-                  "item": "Iron",
+                  "item": "Stone",
                   "amount": 4
                 }
               ],
-              "material": "metal"
+              "material": "stone"
             },
             {
               "prefabname": "rkc_fencepost3",
               "displaynametoken": "$piece_rkc_fencepost",
-              "prefabdescription": "Castle fence post.",
+              "prefabdescription": "Wooden fence post to go with the fancy wooden fence.",
               "requirements": [
                 {
-                  "item": "Iron",
+                  "item": "Wood",
                   "amount": 4
                 }
               ],
-              "material": "metal"
+              "material": "wood"
             }
           ]
         }
