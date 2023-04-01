@@ -64,7 +64,7 @@ namespace CastleStructure
                     UseCustomCategories = true,
                     CustomCategories = new string[]
                     {
-                        "Structure", "Clutter"
+                        "Structure"
                     }
                 });
             PieceManager.Instance.AddPieceTable(masonryTable);
@@ -75,8 +75,8 @@ namespace CastleStructure
                     Name = "$item_rkcscepter",
                     Description = "Build it castle style with the scepter of Power!",
                     Amount = 1,
-                    Enabled = true,
                     CraftingStation = "forge",
+                    MinStationLevel = 1,
                     PieceTable = masonryTable.PieceTablePrefab.name,
                     RepairStation = "forge",
                     Requirements = new[]
@@ -141,7 +141,7 @@ namespace CastleStructure
                     {
                         Place = createfxlist("sfx_build_hammer_stone", "vfx_Place_stone_wall_2x1"),
                         Break = createfxlist("sfx_rock_destroyed", "vfx_Place_stone_wall_2x1"),
-                        Hit   = createfxlist("sfx_Rock_Hit"),
+                        Hit   = createfxlist("sfx_rock_hit"),
                         Open  = createfxlist("sfx_door_open"),
                         Close = createfxlist("sfx_door_close"),
                         Fuel  = createfxlist("vfx_HearthAddFuel"),
@@ -252,7 +252,7 @@ namespace CastleStructure
                     mat.shader = Shader.Find("Custom/Piece");
                 }
             }
-            //Jotunn.Logger.LogInfo(buildItPiecePrefab.name);
+            Jotunn.Logger.LogInfo(buildItPiecePrefab.name);
             return customPiece;
         }
 

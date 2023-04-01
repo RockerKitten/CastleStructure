@@ -523,19 +523,6 @@
               "material": "stone"
             },
             {
-              "prefabname": "rkc_walltop",
-              "displaynametoken": "$piece_rkc_walltop",
-              "prefabdescription": "4m castle wall topper. Lowest part of the slope should face inward.",
-              "requiredstation": "piece_stonecutter",
-              "requirements": [
-                {
-                  "item": "Stone",
-                  "amount": 8
-                }
-              ],
-              "material": "stone"
-            },
-            {
               "prefabname": "rkc_walltop2",
               "displaynametoken": "$piece_rkc_walltop",
               "prefabdescription": "2m castle wall topper.",
@@ -730,18 +717,6 @@
               "material": "metal"
             },
             {
-              "prefabname": "rkc_roof15",
-              "displaynametoken": "$piece_rkc_roof",
-              "prefabdescription": "45 degree 2m outer curve to 4m outer curve. Can snap at the top to a 4m curved roof.",
-              "requirements": [
-                {
-                  "item": "Iron",
-                  "amount": 4
-                }
-              ],
-              "material": "metal"
-            },
-            {
               "prefabname": "rkc_roof16",
               "displaynametoken": "$piece_rkc_roof",
               "prefabdescription": "2m radius, outer roof edge.",
@@ -769,18 +744,6 @@
               "prefabname": "rkc_roof18",
               "displaynametoken": "$piece_rkc_roof",
               "prefabdescription": "4m radius, shorter outer roof edge.",
-              "requirements": [
-                {
-                  "item": "Iron",
-                  "amount": 4
-                }
-              ],
-              "material": "metal"
-            },
-            {
-              "prefabname": "rkc_roof19",
-              "displaynametoken": "$piece_rkc_roof",
-              "prefabdescription": "26 degree 2m outer curve to 4m outer curve. Can snap at the top to a 4m curved roof.",
               "requirements": [
                 {
                   "item": "Iron",
