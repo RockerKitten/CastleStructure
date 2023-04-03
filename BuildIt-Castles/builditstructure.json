@@ -55,6 +55,126 @@
               "material": "wood"
             },
             {
+              "prefabname": "rkc_beam5",
+              "displaynametoken": "$piece_rkc_beam",
+              "prefabdescription": "Stone curved beam.",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 2
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_beam6",
+              "displaynametoken": "$piece_rkc_beam",
+              "prefabdescription": "Stone curved beam.",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 2
+                }
+              ],
+              "material": "Stone"
+            },
+            {
+              "prefabname": "rkc_beam7",
+              "displaynametoken": "$piece_rkc_beam",
+              "prefabdescription": "Stone 1m beam.",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 1
+                }
+              ],
+              "material": "Stone"
+            },
+            {
+              "prefabname": "rkc_beam8",
+              "displaynametoken": "$piece_rkc_beam",
+              "prefabdescription": "Stone 2m beam.",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 2
+                }
+              ],
+              "material": "Stone"
+            },
+            {
+              "prefabname": "rkc_beam9",
+              "displaynametoken": "$piece_rkc_post",
+              "prefabdescription": "Stone 1m post.",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 1
+                }
+              ],
+              "material": "Stone"
+            },
+            {
+              "prefabname": "rkc_beam10",
+              "displaynametoken": "$piece_rkc_post",
+              "prefabdescription": "Stone 2m post.",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 2
+                }
+              ],
+              "material": "Stone"
+            },
+            {
+              "prefabname": "rkc_beam11",
+              "displaynametoken": "$piece_rkc_beam",
+              "prefabdescription": "Stone 26 degree beam.",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 2
+                }
+              ],
+              "material": "Stone"
+            },
+            {
+              "prefabname": "rkc_beam12",
+              "displaynametoken": "$piece_rkc_beam",
+              "prefabdescription": "Stone 45 degree beam.",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 2
+                }
+              ],
+              "material": "Stone"
+            },
+            {
+              "prefabname": "rkc_beam13",
+              "displaynametoken": "$piece_rkc_beam",
+              "prefabdescription": "Stone 26 peak beam.",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 2
+                }
+              ],
+              "material": "Stone"
+            },
+            {
+              "prefabname": "rkc_beam14",
+              "displaynametoken": "$piece_rkc_beam",
+              "prefabdescription": "Stone 45 peak beam.",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 2
+                }
+              ],
+              "material": "Stone"
+            },
+            {
               "prefabname": "rkc_wall1",
               "displaynametoken": "$piece_rkc_wall",
               "prefabdescription": "Stone brick wall.",

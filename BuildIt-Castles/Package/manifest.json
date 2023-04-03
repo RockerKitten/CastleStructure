@@ -1,10 +1,10 @@
 ﻿{
-  "name": "Castle Structure",
+  "name": "BuildIt_CastleStructures",
   "description": "",
-  "version_number": "1.0.0",
+  "version_number": "1.0.2",
   "website_url": "",
   "dependencies": [
-    "denikson-BepInExPack_Valheim-5.4.1901",
-    "ValheimModding-Jotunn-2.7.4"
+    "denikson-BepInExPack_Valheim-5.4.2102",
+    "ValheimModding-Jotunn-2.11.2"
   ]
 }

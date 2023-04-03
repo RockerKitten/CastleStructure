@@ -1,6 +1,3 @@
-// BuildIt-Castles
-// a Valheim mod skeleton using Jötunn
-// 
 // File:    BuildIt-Castles.cs
 // Project: BuildIt-Castles
 using System.Reflection;
@@ -24,9 +21,10 @@ namespace CastleStructure
     {
         public const string PluginGUID = "com.RockerKitten.CastleStructure";
         public const string PluginName = "CastleStructure";
-        public const string PluginVersion = "1.0.0";
-        
-        public static CustomLocalization Localization = LocalizationManager.Instance.GetLocalization();
+        public const string PluginVersion = "1.0.2";
+
+        //public static 
+        private CustomLocalization Localization; //= LocalizationManager.Instance.GetLocalization();
 
         private AssetBundle BuildItAssetBundle { get; set; }
         //private AudioSource fireAudioSource;
@@ -47,9 +45,9 @@ namespace CastleStructure
         {
             this.effects = InitializeEffects();
             InitializeBuildItConstructionTools();
+            fuelObject = PrefabManager.Cache.GetPrefab<GameObject>("Wood");
             InitializeBuildItAssets();
             AddLocalizations();
-            fuelObject = PrefabManager.Cache.GetPrefab<GameObject>("Wood");
             PrefabManager.OnVanillaPrefabsAvailable -= SetupAssets;
         }
 
@@ -162,53 +160,14 @@ namespace CastleStructure
             };
 
             return effects;
-
-            // ORIGINAL REFERENCE DATA FROM BUILDIT
-
-            //var sfxStoneBuild = loadfx("sfx_build_hammer_stone");
-            //var vfxStoneBuild = loadfx("vfx_Place_stone_wall_2x1");
-            //var sfxWoodBuild = loadfx("sfx_build_hammer_wood");
-            //var sfxBreakStone = loadfx("sfx_rock_destroyed");
-            //var sfxWoodBreak = loadfx("sfx_wood_break");
-            //var sfxMetalBuild = loadfx("sfx_build_hammer_metal");
-            //var vfxMetalHit = loadfx("vfx_HitSparks");
-            //var vfxAdd = loadfx("vfx_FireAddFuel");
-            //var sfxAdd = loadfx("sfx_FireAddFuel");
-            //var sfxStoneHit = loadfx("sfx_Rock_Hit");
-            //var vfxAddFuel = loadfx("vfx_HearthAddFuel");
-            //var chestOpen = loadfx("sfx_chest_open");
-            //var sfxTreeFall = loadfx("sfx_tree_fall_hit");
-            //var vfxTreeFallHit = loadfx("vfx_tree_fall_hit");
-            //var sfxTreeHit = loadfx("sfx_tree_hit");
-            //var vfxBirch = loadfx("vfx_birch1_cut");
-            //var sfxFall = loadfx("sfx_tree_fall");
-            //var vfxWoodHit = loadfx("vfx_SawDust");
-            //var vfxDestroyLogHalf = loadfx("vfx_firlogdestroyed_half");
-            //var sfxBuildRug = loadfx("sfx_build_hammer_default");
-            //var sfxDoorOpen = loadfx("sfx_door_open");
-            //var sfxDoorClose = loadfx("sfx_door_close");
-
-
-            //buildStone = new EffectList { m_effectPrefabs = new EffectList.EffectData[2] { new EffectList.EffectData { m_prefab = sfxStoneBuild }, new EffectList.EffectData { m_prefab = vfxStoneBuild } } };
-            //breakStone = new EffectList { m_effectPrefabs = new EffectList.EffectData[2] { new EffectList.EffectData { m_prefab = sfxBreakStone }, new EffectList.EffectData { m_prefab = vfxWoodHit } } };
-            //hitStone = new EffectList { m_effectPrefabs = new EffectList.EffectData[1] { new EffectList.EffectData { m_prefab = sfxStoneHit } } };
-            //buildWood = new EffectList { m_effectPrefabs = new EffectList.EffectData[2] { new EffectList.EffectData { m_prefab = sfxWoodBuild }, new EffectList.EffectData { m_prefab = vfxStoneBuild } } };
-            //breakWood = new EffectList { m_effectPrefabs = new EffectList.EffectData[2] { new EffectList.EffectData { m_prefab = sfxWoodBreak }, new EffectList.EffectData { m_prefab = vfxWoodHit } } };
-            //hitWood = new EffectList { m_effectPrefabs = new EffectList.EffectData[1] { new EffectList.EffectData { m_prefab = vfxWoodHit } } };
-            //buildMetal = new EffectList { m_effectPrefabs = new EffectList.EffectData[2] { new EffectList.EffectData { m_prefab = sfxMetalBuild }, new EffectList.EffectData { m_prefab = vfxStoneBuild } } };
-            //breakMetal = new EffectList { m_effectPrefabs = new EffectList.EffectData[2] { new EffectList.EffectData { m_prefab = sfxBreakStone }, new EffectList.EffectData { m_prefab = vfxMetalHit } } };
-            //hitMetal = new EffectList { m_effectPrefabs = new EffectList.EffectData[1] { new EffectList.EffectData { m_prefab = vfxMetalHit } } };
-            //hearthAddFuel = new EffectList { m_effectPrefabs = new EffectList.EffectData[2] { new EffectList.EffectData { m_prefab = vfxAddFuel }, new EffectList.EffectData { m_prefab = sfxAdd } } };
-            //fireAddFuel = new EffectList { m_effectPrefabs = new EffectList.EffectData[2] { new EffectList.EffectData { m_prefab = vfxAdd }, new EffectList.EffectData { m_prefab = sfxAdd } } };
-            //buildRug = new EffectList { m_effectPrefabs = new EffectList.EffectData[2] { new EffectList.EffectData { m_prefab = sfxBuildRug }, new EffectList.EffectData { m_prefab = vfxStoneBuild } } };
-            //doorOpen = new EffectList { m_effectPrefabs = new EffectList.EffectData[1] { new EffectList.EffectData { m_prefab = sfxDoorOpen } } };
-            //doorClose = new EffectList { m_effectPrefabs = new EffectList.EffectData[1] { new EffectList.EffectData { m_prefab = sfxDoorClose } } };
         }
 
         private void AddLocalizations()
         {
-            CustomLocalization customLocalization = new CustomLocalization();
-            customLocalization.AddTranslation("English", new Dictionary<String, String>
+            Localization = new CustomLocalization();
+            LocalizationManager.Instance.AddLocalization(Localization);
+            //CustomLocalization customLocalization = new CustomLocalization();
+            Localization.AddTranslation("English", new Dictionary<String, String>
             {
                 { "piece_rkc_wall", "Wall" },{ "piece_rkc_beam", "Beam" },{ "piece_rkc_glasswall", "Glass Curved Wall" },{ "piece_rkc_walltransition", "Wall Transition" },{ "piece_rkc_wallcorner", "Stone Wall Corner" }
                 ,{ "piece_rkc_halfwall", "Half Wall" },{ "piece_rkc_towertop", "Tower Topper" },{ "piece_rkc_fence", "Fence" },{ "piece_rkc_gate", "Gate" },{ "piece_rkc_fencepost", "Fence Post" }
@@ -252,7 +211,7 @@ namespace CastleStructure
                     mat.shader = Shader.Find("Custom/Piece");
                 }
             }
-            Jotunn.Logger.LogInfo(buildItPiecePrefab.name);
+            //Jotunn.Logger.LogInfo(buildItPiecePrefab.name);
             return customPiece;
         }
 
@@ -292,8 +251,6 @@ namespace CastleStructure
                 //var layer = piecePrefab.transform.Find("_enabled_high/SFX").gameObject;
                 //layer.GetComponent<AudioSource>().outputAudioMixerGroup = AudioMan.instance.m_ambientMixer;
                 //layer.GetComponent<AudioSource>().clip = 
-
-
 
                 //buildItPiece.FuelItem;
                 //fireAudioSource = piecePrefab.GetComponentInChildren<AudioSource>();
