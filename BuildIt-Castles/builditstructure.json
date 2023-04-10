@@ -1069,6 +1069,42 @@
               "material": "stone"
             },
             {
+              "prefabname": "rkc_floor15",
+              "displaynametoken": "$piece_rkc_floor",
+              "prefabdescription": "Stone floor.",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 8
+                }
+              ],
+              "material": "wood"
+            },
+            {
+              "prefabname": "rkc_floor16",
+              "displaynametoken": "$piece_rkc_floor",
+              "prefabdescription": "Wood floor.",
+              "requirements": [
+                {
+                  "item": "Wood",
+                  "amount": 8
+                }
+              ],
+              "material": "wood"
+            },
+            {
+              "prefabname": "rkc_floor17",
+              "displaynametoken": "$piece_rkc_floor",
+              "prefabdescription": "Wood floor.",
+              "requirements": [
+                {
+                  "item": "Wood",
+                  "amount": 8
+                }
+              ],
+              "material": "wood"
+            },
+            {
               "prefabname": "rkc_floor10",
               "displaynametoken": "$piece_rkc_floor",
               "prefabdescription": "Low platform. Floors can be placed on top to match the height of stairs.",
@@ -1132,6 +1168,18 @@
               "prefabname": "rkc_floor9",
               "displaynametoken": "$piece_rkc_floor",
               "prefabdescription": "Slate 1/8 circle 4m radius floor tile.",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 4
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_floor18",
+              "displaynametoken": "$piece_rkc_floor",
+              "prefabdescription": "Slate 1/8 circle 4m to 2m radius floor tile.",
               "requirements": [
                 {
                   "item": "Stone",
@@ -2126,6 +2174,38 @@
 
             },
             {
+
+              "prefabname": "rkc_chimneycap",
+              "displaynametoken": "$piece_rkc_chimneycap",
+              "prefabdescription": "Chimney cap for the chimney to keep your fires lit when it's raining.",
+              "requirements": [
+                {
+                  "item": "Iron",
+                  "amount": 6
+                }
+              ],
+              "material": "metal"
+
+            },
+            {
+
+              "prefabname": "rkc_chimneycap2",
+              "displaynametoken": "$piece_rkc_chimneycap",
+              "prefabdescription": "Chimney cap for the chimney to keep your fires lit when it's raining.",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 6
+                },
+                {
+                  "item": "Copper",
+                  "amount": 2
+                }
+              ],
+              "material": "stone"
+
+            },
+            {
               "prefabname": "rkc_stainedglass1",
               "displaynametoken": "$piece_rkc_staindglass",
               "prefabdescription": "Rectangular staind glass with left facing griffen. Bright side intended to be towards the inside, must be placed on walls from the inside.",
@@ -2432,6 +2512,42 @@
                 }
               ],
               "material": "wood"
+            },
+            {
+              "prefabname": "rkc_arch",
+              "displaynametoken": "$piece_rkc_arch",
+              "prefabdescription": "Stone archway, can be decorated with the arch decor pieces.",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 8
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_arch2",
+              "displaynametoken": "$piece_rkc_arch",
+              "prefabdescription": "Stone archway, can be decorated with the arch decor pieces.",
+              "requirements": [
+                {
+                  "item": "Stone",
+                  "amount": 8
+                }
+              ],
+              "material": "stone"
+            },
+            {
+              "prefabname": "rkc_archdecor1",
+              "displaynametoken": "$piece_rkc_archdecor",
+              "prefabdescription": "Decorative pieces to be snapped into the Stone Archways.",
+              "requirements": [
+                {
+                  "item": "Iron",
+                  "amount": 2
+                }
+              ],
+              "material": "metal"
             }
           ]
         }
