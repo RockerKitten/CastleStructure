@@ -8,7 +8,7 @@ Note: This mod does require that you use some form of build menu extender. I rec
 ## Featuring
 New spiral stairs climbing both clockwise and counterclockwise and in both 2m and 4m radius. They are snappable, and smoothly climbable. Along with these spiral stairs are the requesite curved wall blocks, each of which is 1/8th of a circle, snapps to each other, and perfectly fits around the stairs. Walls also come in two versions, 2m and 4m radius. (For those of you who are a bit math challanged, it's ok we still love you, that's 4m or two full floor tiles across a the full circle for the first version, and 8m or four floor tiles across a full circle for the second version.)
 
-In addition to all this wonderful curviness, you will find many new stone pieces to help you build the castle of your dreams! Roof pieces for your towers that perfectly match the roof pieces introduced in Build IT, statues, dungeon decorations, evil looking furniture, snappable rugs and banquet tables, new chairs, thrones and so much MORE!
+In addition to all this wonderful curviness, you will find many new stone pieces to help you build the castle of your dreams! Roof pieces for your towers, new gates and doors, and a brand new snappable hearth and chimney so you can use your smoke generating hearths and the chimney will take your smoke safely out of your building, with 2 chimney caps to protect your fires from the rain!
 
 ## Changelog
 1.0.0 Inital Release!
