@@ -73,13 +73,13 @@ namespace CastleStructure
                     Name = "$item_rkcscepter",
                     Description = "Build it castle style with the scepter of Power!",
                     Amount = 1,
-                    CraftingStation = "forge",
+                    CraftingStation = "piece_workbench",
                     MinStationLevel = 1,
                     PieceTable = masonryTable.PieceTablePrefab.name,
-                    RepairStation = "forge",
+                    RepairStation = "piece_workbench",
                     Requirements = new[]
                     {
-                        new RequirementConfig {Item = "Iron", Amount = 2 }
+                        new RequirementConfig {Item = "Wood", Amount = 2 }
                     }
                 });
             ItemManager.Instance.AddItem(tool);
@@ -164,9 +164,7 @@ namespace CastleStructure
 
         private void AddLocalizations()
         {
-            Localization = new CustomLocalization();
-            LocalizationManager.Instance.AddLocalization(Localization);
-            //CustomLocalization customLocalization = new CustomLocalization();
+            Localization = LocalizationManager.Instance.GetLocalization();
             Localization.AddTranslation("English", new Dictionary<String, String>
             {
                 { "piece_rkc_wall", "Wall" },{ "piece_rkc_beam", "Beam" },{ "piece_rkc_glasswall", "Glass Curved Wall" },{ "piece_rkc_walltransition", "Wall Transition" },{ "piece_rkc_wallcorner", "Stone Wall Corner" }
@@ -175,8 +173,8 @@ namespace CastleStructure
                 ,{ "piece_rkc_wallpanel", "Wall Panel" },{ "piece_rkc_corbel", "Corbel" },{ "piece_rkc_corbelcorner", "Corbel Corner" },{ "piece_rkc_floor", "Floor" },{ "piece_rkc_bridge", "Bridge" }
                 ,{ "piece_rkc_bridgerail", "Bridge Railing" },{ "piece_rkc_spiralstair", "Spiral Stair" },{ "piece_rkc_stairs", "Stairs" },{ "piece_rkc_door", "Door" },{ "piece_rkc_portcullis", "Portcullis" }
                 ,{ "piece_rkc_drawbridge", "Drawbridge" },{ "piece_rkc_trapdoor", "Trap Door" },{ "piece_rkc_window", "Window" },{ "piece_rkc_post", "Post" },{ "piece_rkc_support", "Support" }
-                ,{ "piece_rkc_pillar", "Pillar" },{ "piece_rkc_column", "Column" },{ "piece_rkc_ceilingvault", "Vaulted Ceiling" },{ "piece_rkc_hearth", "Hearth" },{ "piece_rkc_chimney", "Chimney" },
-                {"item_rkcscepter","Scepter of Power" }
+                ,{ "piece_rkc_pillar", "Pillar" },{ "piece_rkc_column", "Column" },{ "piece_rkc_ceilingvault", "Vaulted Ceiling" },{ "piece_rkc_hearth", "Hearth" },{ "piece_rkc_chimney", "Chimney" }
+               
             });
         }
 
@@ -205,12 +203,8 @@ namespace CastleStructure
             var customPiece = new CustomPiece(buildItPiecePrefab, fixReference: false, pieceConfig);
             var material = buildItPiecePrefab.GetComponentsInChildren<Material>();
             foreach (Material mat in material)
-            {
-                if (mat.name == "replace")
-                {
-                    mat.shader = Shader.Find("Custom/Piece");
-                }
-            }
+            { if (mat.name == "replace")
+                { mat.shader = Shader.Find("Custom/Piece");}}
             //Jotunn.Logger.LogInfo(buildItPiecePrefab.name);
             return customPiece;
         }
